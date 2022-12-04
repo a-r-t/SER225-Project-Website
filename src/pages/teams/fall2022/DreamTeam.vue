@@ -35,9 +35,9 @@
         p.asset-description Full Game Playthrough
       h3 Downloads
       .download-container
-        a(href="./DreamTeam-Platformer.jar" download) Download JAR File (must have Java 1.8 or greater installed)
+        a(href="https://drive.google.com/uc?export=download&id=1crSxO2C24-0mCX-xPFIAgDQ5V76ztXA0" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)
       .download-container
-        a(href="./DreamTeam-Platformer.exe" download) Download EXE File (Windows Only)
+        a(href="https://drive.google.com/uc?export=download&id=1p2ImKstl6pikelwc7YOB9Z8yVvvpvOgk" download target="_blank") Download EXE File (Windows Only)
 
 
 </template>

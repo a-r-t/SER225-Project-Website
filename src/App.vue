@@ -25,6 +25,7 @@ export default {
 
 body {
   margin: 0 !important;
+  background: #5D7A8C;
 }
 
 .no-margin {

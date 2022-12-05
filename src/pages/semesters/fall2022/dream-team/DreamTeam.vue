@@ -28,7 +28,7 @@
       p The goal of each level is to find the key, and then use that key to unlock the animal from the cage.
       p If an enemy hits the player, they will take damage. Take enough damage and its game over.
       h3 Notes
-      p Collecting all of the coins in every level will give you a special reward at the end (hit the disco ball)!
+      p Collecting all of the coins in every level will give you a special reward at the end party screen (hit the disco ball)!
       h3 Videos
       .video
         video(:src="require('./assets/game-video.mp4')" controls preload="metadata")
@@ -59,8 +59,13 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.outer-container {
+  display: flex;
+  justify-content: center;
+  background: #5D7A8C;
+}
 
+.container {
   width: 60rem;
   margin-top: 28px;
   margin-right: 20px;
@@ -72,12 +77,6 @@ export default {
   border: 2px solid #253C59;
   padding-bottom: 20px;
   margin-bottom: 20px;
-}
-
-.outer-container {
-  display: flex;
-  justify-content: center;
-  background: #5D7A8C;
 }
 
 .screenshot {

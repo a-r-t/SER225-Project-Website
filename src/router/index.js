@@ -1,12 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../pages/Home.vue'
-import Semester from '../pages/Semester.vue'
-import SelectedSemester from '../pages/SelectedSemester.vue'
+import Teams from '../pages/Teams.vue'
 import Team from '../pages/Team.vue'
-import SelectedTeam from '../pages/SelectedTeam.vue'
-
-import DreamTeam from '../pages/teams/fall2022/DreamTeam.vue'
+import Search from '../pages/Search.vue'
+import { eventBus } from '../helpers/EventBus.js'
 
 
 Vue.use(VueRouter)
@@ -18,29 +16,19 @@ const routes = [
     component: Home
   },
   {
-    path: '/semesters',
-    name: 'Semesters',
-    component: Semester
-  },
-  {
-    path: '/semesters/:semesterId',
-    name: 'SelectedSemester',
-    component: SelectedSemester
-  },
-  {
-    path: '/semester/:semesterId/teams',
+    path: '/teams',
     name: 'Teams',
+    component: Teams
+  },
+  {
+    path: '/semesters/:semester/teams/:team',
+    name: 'Team',
     component: Team
   },
   {
-    path: '/semester/:semesterId/teams/:teamId',
-    name: 'SelectedTeam',
-    component: SelectedTeam
-  },
-  {
-    path: '/dreamteam',
-    name: 'dreamteam',
-    component: DreamTeam
+    path: '/search',
+    name: 'Search',
+    component: Search
   }
 ]
 
@@ -48,6 +36,16 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.name === 'Team') {
+    eventBus.$emit('route-change', 'Teams')
+  }
+  else {
+    eventBus.$emit('route-change', to.name)
+  }
+  next()
 })
 
 export default router

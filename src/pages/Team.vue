@@ -2,7 +2,7 @@
 .root
   Fall2022(v-if="semester === 'fall2022'" :team="team")
   template(v-else)
-    p Unable to find team!
+    p.error-message Invalid Semester!
 </template>
 
 <script>
@@ -25,3 +25,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.error-message {
+  color: red;
+  margin-left: 20px;
+  font-size: 20px;
+}
+</style>

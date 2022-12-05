@@ -1,6 +1,8 @@
 <template lang="pug">
 .root
   DreamTeam(v-if="team === 'dream-team'")
+  template(v-else)
+    p.error-message Invalid Team!
 </template>
 
 <script>
@@ -19,3 +21,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.error-message {
+  color: red;
+  margin-left: 20px;
+  font-size: 20px;
+}
+</style>

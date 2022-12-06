@@ -2,8 +2,8 @@
 .root
   .outer-container
     .container
-      h1 Search
-      p You can search here by team member name or team name to help you locate a specific project page.
+      h1.search-header Search
+      p.no-margin.search-info-label You can search here by student name or team name to help you locate a specific project page.
       .search-container
         input.search-input(v-model="searchQuery" placeholder="Enter search query here...")
         button.search-button(@click="search") &#x1F50D;
@@ -14,7 +14,6 @@
         .search-field-container
           input.search-field-radio-button(type="radio" value="team" v-model="searchField")
           label Team
-
   .outer-container(v-if="searchResults")
     .container
       .search-results
@@ -101,6 +100,14 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.search-header {
+  margin-bottom: 15px;
+}
+
+.search-info-label {
+  margin-bottom: 10px;
 }
 
 .search-input {

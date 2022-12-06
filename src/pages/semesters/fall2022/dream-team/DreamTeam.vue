@@ -6,11 +6,15 @@
       .repo
         a(href="https://github.com/Taylorlea43/DreamTeam-Platformer") GitHub Repo
       h2 Team Members
+      strong Developers:
       ul
         li Emilio Cruz
         li Hannah Pfersch
         li James Phillips
         li Taylor Lea
+      strong Managers: 
+      ul
+        li Samantha Spinner
       h2 Game
       img(:src="require('./assets/titlescreen.png')")
       h3 About

@@ -1,0 +1,33 @@
+{
+  "semesters": [
+    {
+      "semester": "fall2022",
+      "display": "Fall 2022",
+      "teams": [
+        {
+          "team": "cosmic-cats",
+          "display": "Cosmic Cats",
+          "members": [
+            "Momoreoluwa Ayinde",
+            "Ohm Patel",
+            "Steven Griffin",
+            "Rom Wasserman",
+            "Lucas Morello",
+            "Isaac Crawford"
+          ]
+        },
+        {
+          "team": "dream-team",
+          "display": "Dream Team",
+          "members": [
+            "Emilio Cruz",
+            "Hannah Pfersch",
+            "James Phillips",
+            "Taylor Lea",
+            "Samantha Spinner"
+          ]
+        }
+      ]
+    }
+  ]
+}

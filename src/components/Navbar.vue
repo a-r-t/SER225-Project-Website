@@ -22,17 +22,13 @@ export default {
   },
   data() {
     return {
-      routes: {
-        HOME: 100,
-        SEMESTER: 200,
-        TEAM: 300
-      },
-      selectedRoute: this.$route.name
+      selectedRoute: ''
     }
   },
   created() {
+    this.updateSelectedRoute(this.$route.name)
     eventBus.$on('route-change', (selectedRoute) => {
-      this.selectedRoute = selectedRoute
+      this.updateSelectedRoute(selectedRoute)
     })
   },
   computed: {
@@ -47,6 +43,12 @@ export default {
     },
   },
   methods: {
+    updateSelectedRoute(selectedRoute) {
+      this.selectedRoute = selectedRoute
+      if (this.selectedRoute === 'Team') {
+        this.selectedRoute = 'Teams'
+      }
+    },
     toHome() {
       return this.$router.push('/').catch(() => {})
     },

@@ -39,12 +39,7 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  if (to.name === 'Team') {
-    eventBus.$emit('route-change', 'Teams')
-  }
-  else {
-    eventBus.$emit('route-change', to.name)
-  }
+  eventBus.$emit('route-change', to.name)
   next()
 })
 

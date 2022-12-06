@@ -39,41 +39,51 @@ export default {
       searchResults: null,
     }
   },
+  created() {
+    if (this.$route.query.query) {
+      this.searchQuery = this.$route.query.query
+      this.search()
+    }
+  },
   methods: {
     search() {
       if (!this.searchQuery) {
         return
       }
-      const query = this.searchQuery.toLowerCase()
-      const matches = []
-      const cache = new Set()
-      teamData.semesters.forEach(semester => {
-        semester.teams.forEach(team => {
-          if (this.searchField === 'student') {
-            team.members.forEach(member => {
-              if (member.toLowerCase().includes(query)) {
-                const display = `${semester.display} - ${team.display} (${member})`
-                if (!cache.has(display)) {
-                  matches.push({ semester: semester.semester, team: team.team, display })
-                  cache.add(display)
+      return this.$router.replace({ path: this.$route.path, query: {...this.$route.query, query: this.searchQuery ? this.searchQuery : undefined }})
+        .catch(() => {})
+        .finally(() => {
+          const query = this.searchQuery.toLowerCase()
+          const matches = []
+          const cache = new Set()
+          teamData.semesters.forEach(semester => {
+            semester.teams.forEach(team => {
+              if (this.searchField === 'student') {
+                team.members.forEach(member => {
+                  if (member.toLowerCase().includes(query)) {
+                    const display = `${semester.display} - ${team.display} (${member})`
+                    if (!cache.has(display)) {
+                      matches.push({ semester: semester.semester, team: team.team, display })
+                      cache.add(display)
+                    }
+                  }
+                })
+              }
+              else if (this.searchField === 'team') {
+                if (team.display.toLowerCase().includes(query)) {
+                  const display = `${semester.display} - ${team.display}`
+                  if (!cache.has(display)) {
+                    matches.push({ semester: semester.semester, team: team.team, display })
+                    cache.add(display)
+                  }
                 }
               }
             })
-          }
-          else if (this.searchField === 'team') {
-            if (team.display.toLowerCase().includes(query)) {
-              const display = `${semester.display} - ${team.display}`
-              if (!cache.has(display)) {
-                matches.push({ semester: semester.semester, team: team.team, display })
-                cache.add(display)
-              }
-            }
-          }
+          })
+          matches.sort((a, b) => (a.display > b.display) ? 1 : -1)
+          this.searchResults = matches
         })
-      })
-      matches.sort((a, b) => (a.display > b.display) ? 1 : -1)
-      this.searchResults = matches
-    }
+      }
   }
 }
 </script>

@@ -7,7 +7,7 @@
         p.no-margin.semester-select-label Select which semester you would like to see the teams for.
         v-select.semester-select(
           :options="semesters" 
-          label="title" 
+          label="display" 
           placeholder="Choose a semester..." 
           v-model="selectedSemester" 
           :searchable="false" 
@@ -18,13 +18,22 @@
     .container
       .team-select-container
         h1.teams-header Teams
-        router-link.team-link(v-for="team in teams" :key="team.title" :to="`/semesters/${selectedSemester.value}/teams/${team.value}`") {{ team.title }}
+        router-link.team-link(v-for="team in teams" :key="team.display" :to="`/semesters/${selectedSemester.value}/teams/${team.value}`" target="_blank") {{ team.display }}
 </template>
 
 <script>
+import teamData from '../model/team-data.json'
+
 export default {
   name: 'Teams',
   created() {
+    this.semesters = teamData.semesters.map(semester => {
+      return {
+        display: semester.display,
+        value: semester.semester
+      }
+    })
+
     if (this.$route.query.semester) {
       this.selectedSemester = this.semesters.find(semester => semester.value === this.$route.query.semester)
       this.onSemesterSelected(this.selectedSemester)
@@ -32,9 +41,7 @@ export default {
   },
   data() {
     return {
-      semesters: [
-        { title: 'Fall 2022', value: 'fall2022' }
-      ],
+      semesters: [],
       selectedSemester: '',
       teams: []
     }
@@ -45,18 +52,16 @@ export default {
     onSemesterSelected(selectedSemester) {
       this.selectedSemester = selectedSemester
       if (this.selectedSemester) {
-        if (this.selectedSemester.value === 'fall2022') {
-          this.teams = [
-            { title: 'Cosmic Cats', value: 'cosmic-cats' },
-            { title: 'Dream Team', value: 'dream-team' },
-            { title: 'Lunartics', value: 'lunartics' },
-            { title: 'Mean Turtles', value: 'mean-turtles' },
-            { title: 'Project Z', value: 'project-z' },
-            { title: 'Team Squirrel', value: 'team-squirrel' },
-            { title: 'Three Remaining Musketeers', value: 'three-remaining-musketeers' },
-            { title: 'Witchy Cat', value: 'witchy-cat' }
-          ]
-        }
+        this.teams = teamData.semesters
+          .find(semester => semester.semester === this.selectedSemester.value)
+          .teams
+          .map(team => {
+            return {
+              display: team.display,
+              value: team.team
+            }
+          })
+        this.teams.sort((a, b) => (a.display > b.display) ? 1 : -1)
       }
       return this.$router.replace({ path: this.$route.path, query: {...this.$route.query, semester: this.selectedSemester ? this.selectedSemester.value : undefined }})
         .catch(() => {})

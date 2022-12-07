@@ -14,7 +14,7 @@
         li Taylor Lea
       strong Managers: 
       ul
-        li Samantha Spinner
+        li Samantha Spinner (Sammi)
       h2 Game
       img(:src="require('./assets/titlescreen.png')")
       h3 About
@@ -42,23 +42,13 @@
         a(href="https://drive.google.com/uc?export=download&id=1crSxO2C24-0mCX-xPFIAgDQ5V76ztXA0" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)
       .download-container
         a(href="https://drive.google.com/uc?export=download&id=1p2ImKstl6pikelwc7YOB9Z8yVvvpvOgk" download target="_blank") Download EXE File (Windows Only)
-
-
+      .download-container
+        a(href="https://drive.google.com/uc?export=download&id=1p2ImKstl6pikelwc7YOB9Z8yVvvpvOgk" download target="_blank") Download APP File (MacOS Only)
 </template>
 
 <script>
 export default {
-  name: 'Semester',
-  created() {
-    
-  },
-  data() {
-    return {
-
-    }
-  },
-  components: {
-  }
+  name: 'DreamTeam'
 }
 </script>
 

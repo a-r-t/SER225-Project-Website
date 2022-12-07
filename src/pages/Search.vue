@@ -19,7 +19,7 @@
       .search-results
         h1 Results 
         template(v-if="searchResults && searchResults.length > 0")
-          router-link.result-link(v-for="searchResult in searchResults" :key="searchResult.display" :to="`/semesters/${searchResult.semester}/teams/${searchResult.team}`") {{ searchResult.display }}
+          router-link.result-link(v-for="searchResult in searchResults" :key="searchResult.display" :to="`/semesters/${searchResult.semester}/teams/${searchResult.team}`" target="_blank") {{ searchResult.display }}
         template(v-else)
           p.no-margin No results found!
 
@@ -60,8 +60,8 @@ export default {
             semester.teams.forEach(team => {
               if (this.searchField === 'student') {
                 team.members.forEach(member => {
-                  if (member.toLowerCase().includes(query)) {
-                    const display = `${semester.display} - ${team.display} (${member})`
+                  if (member.name.toLowerCase().includes(query) || (member.alias && member.alias.toLowerCase().includes(query))) {
+                    const display = `${semester.display} - ${team.display} (${member.name})`
                     if (!cache.has(display)) {
                       matches.push({ semester: semester.semester, team: team.team, display })
                       cache.add(display)

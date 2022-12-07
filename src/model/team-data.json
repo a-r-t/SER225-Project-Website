@@ -8,23 +8,90 @@
           "team": "cosmic-cats",
           "display": "Cosmic Cats",
           "members": [
-            "Momoreoluwa Ayinde",
-            "Ohm Patel",
-            "Steven Griffin",
-            "Rom Wasserman",
-            "Lucas Morello",
-            "Isaac Crawford"
+            { "name": "Momoreoluwa Ayinde", "alias": "Momore Ayinde" },
+            { "name": "Ohm Patel" },
+            { "name": "Steven Griffin" },
+            { "name": "Rom Wasserman" },
+            { "name": "Lucas Morello" },
+            { "name": "Isaac Crawford" }
           ]
         },
         {
           "team": "dream-team",
           "display": "Dream Team",
           "members": [
-            "Emilio Cruz",
-            "Hannah Pfersch",
-            "James Phillips",
-            "Taylor Lea",
-            "Samantha Spinner"
+            { "name": "Emilio Cruz" },
+            { "name": "Hannah Pfersch" },
+            { "name": "James Phillips" },
+            { "name": "Taylor Lea" },
+            { "name": "Samantha Spinner", "alias": "Sammi Spinner" }
+          ]
+        },
+        {
+          "team": "mean-turtles",
+          "display": "Mean Turtles",
+          "members": [
+            { "name": "Kastrijot Syla", "alias": "Kash Syla" },
+            { "name": "Mia Troiano" },
+            { "name": "Dylan Bellinger" }
+          ]
+        },
+        {
+          "team": "lunartics",
+          "display": "Lunartics",
+          "members": [
+            { "name": "Elizabeth Delea", "alias": "Ellie Delea" },
+            { "name": "Lauren Sloane" },
+            { "name": "Jacob Hogrefe", "alias": "Jake Hogrefe" },
+            { "name": "Matthew Zingarella", "alias": "Matt Zingarella" },
+            { "name": "Kevin Couillard" }
+          ]
+        },
+        {
+          "team": "three-remaining-musketeers",
+          "display": "Three Remaining Musketeers",
+          "members": [
+            { "name": "Kinshu Gupta" },
+            { "name": "Eric Carlson" },
+            { "name": "John Hangen", "alias": "Jack Hangen" },
+            { "name": "Aidan Schmid" }
+          ]
+        },
+        {
+          "team": "team-squirrel",
+          "display": "Team Squirrel",
+          "members": [
+            { "name": "Garrett Goldberg" },
+            { "name": "Philip Caldarella", "alias": "Phil Caldarella" },
+            { "name": "Andrew Labbe" },
+            { "name": "Andrew Kulowski" },
+            { "name": "Micaela Grajales", "alias" : "Mica Grajales" },
+            { "name": "Alexander Goriup", "alias": "Alec Goriup" },
+            { "name": "Amber Kusma" }
+          ]
+        },
+        {
+          "team": "anita-the-cat",
+          "display": "Anita the Cat",
+          "members": [
+            { "name": "Nicholas Centeno", "alias": "Nic Centeno" },
+            { "name": "Camryn Keller" },
+            { "name": "Joseph Noga", "alias": "Joe Noga" },
+            { "name": "Madigan Smith", "alias": "Madi Smith" },
+            { "name": "Michael Ruocco", "alias": "Mike Ruocco" },
+            { "name": "Sadjell Mamon" }
+          ]
+        },
+        {
+          "team": "project-z",
+          "display": "Project Z",
+          "members": [
+            { "name": "Brian Wanamaker" },
+            { "name": "Harsh Gandhi" },
+            { "name": "Kevin Rodriguez" },
+            { "name": "Matthew Nova", "alias": "Matt Nova" },
+            { "name": "Aaryan Kapoor" },
+            { "name": "Kyle Chutjian" }
           ]
         }
       ]

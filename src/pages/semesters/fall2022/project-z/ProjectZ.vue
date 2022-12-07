@@ -18,6 +18,8 @@
         li Kyle Chutjian
       h2 Game
       img(:src="require('./assets/titlescreen.png')")
+      h3 Genre
+      p Survival Shooter, Horror
       h3 About
       p Play Project Z...if you dare! 
       p An endless horde of zombies are coming at you -- are you ready to fight to survive?
@@ -68,8 +70,6 @@
         a(href="https://drive.google.com/uc?export=download&id=1OwfyBg3JmUJwAO1b5rR6IIXqZrmzg5LV" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)
       .download-container
         a(href="https://drive.google.com/uc?export=download&id=1oUYSADH5B-SuMtgQc4zgf2PLMM-TGgu6" download target="_blank") Download EXE File (Windows Only)
-      .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1z8LNpE_LH74579daJ0xAWaPchj5nsKA1" download target="_blank") Download APP File (MacOS Only -- Unzip file first)
 </template>
 
 <script>

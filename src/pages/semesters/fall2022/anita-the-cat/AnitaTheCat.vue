@@ -17,34 +17,58 @@
       ul
         li Sadjell Mamon
       h2 Game
-      //- img(:src="require('./assets/titlescreen.png')")
+      img(:src="require('./assets/titlescreen.png')")
+      h3 Genre
+      p RPG, Puzzle
       h3 About
-      p Welcome to Zoomania! 
-      p.no-margin An evil zookeeper has kidnapped several zoo animals, and it is up to you to journey across the globe to save them. 
-      p Watch out -- the zookeeper's plan will not be so easy to foil! 
+      p Welcome to Witchy Cat! 
+      p Join Anita the Cat in her quest to create a mysterious magic potion!
+      p You will explore various different areas representing the four seasons in order to find the ingredients needed.
+      p What does this potion do exactly? Well...you're just going to have to find out.
       h3 Screenshots
       .screenshot
-        //- img(:src="require('./assets/desert-level.png')")
-        p.asset-description Desert Level
+        img(:src="require('./assets/autumn.png')")
+        p.asset-description Autumn
       .screenshot
-        //- img(:src="require('./assets/tree-level.png')")
-        p.asset-description Tree Level
+        img(:src="require('./assets/winter.png')")
+        p.asset-description Winter
+      .screenshot
+        img(:src="require('./assets/summer.png')")
+        p.asset-description Summer
       h3 Instructions
-      p The goal of each level is to find the key, and then use that key to unlock the animal from the cage.
-      p If an enemy hits the player, they will take damage. Take enough damage and its game over.
+      p Your goal is to travel through every seasonal-based area and collect three key items in order to create a potion: 
+      ul 
+        li Golden Leaf from the Autumn Zone
+        li Perfect Sphere of Ice from the Winter Zone
+        li Fire Rose from the Summer Zone
+      p Controls:
+      ul
+        li Use the directional keys to move the player character, Anita the Cat. 
+        li Hold SHIFT while moving to sprint. 
+        li Press SPACE while facing an NPC character to speak to or and to use an item on its intended target. 
+        ul
+          li Also, will pick up items and progress through dialogue boxes. 
+        li Press I to either reveal or hide the inventory. 
+        li Press E while the inventory is active to drop Anita's current held item. 
+        li Press O to reveal the instructions for the sound system
       h3 Notes
-      p Collecting all of the coins in every level will give you a special reward at the end party screen (hit the disco ball)!
+      ul
+        li The Hall of Shame easter egg is hidden behind Pizza's house in the Summer Zone.
+        li Collect 15 coins and bring them to the moyai head in the Haunted House to unlock a secret.
+        ul
+          li There are 4 coins in the Spring Zone, 5 in the Autumn Zone (including the Haunted House), 5 in the Winter Zone, and 3 in the Summer Zone.
+        li The boat spawned by the potion appears at the bottom of the Spring Zone map.
+        li There is a noticeable lag spike when picking up the Fish in the Spring Zone, should you end up dropping it from your inventory.
+        li DO NOT DROP THE STAFF WHILE IN THE MAZE. YOU MAY GET SOFTLOCKED.
       h3 Videos
       .video
-        //- video(:src="require('./assets/game-video.mp4')" controls preload="metadata")
+        video(:src="require('./assets/game-video.mp4')" controls preload="metadata")
         p.asset-description Full Game Playthrough
       h3 Downloads
       .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1crSxO2C24-0mCX-xPFIAgDQ5V76ztXA0" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)
+        a(href="https://drive.google.com/uc?export=download&id=1FJOzq6t0l1sboO72krEiK2XMVmVcNTf1" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)
       .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1p2ImKstl6pikelwc7YOB9Z8yVvvpvOgk" download target="_blank") Download EXE File (Windows Only)
-      .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1p2ImKstl6pikelwc7YOB9Z8yVvvpvOgk" download target="_blank") Download APP File (MacOS Only)
+        a(href="https://drive.google.com/uc?export=download&id=1E84i6VnUN_M40zPxWoUSzLUNyRZsCZel" download target="_blank") Download EXE File (Windows Only)
 </template>
 
 <script>

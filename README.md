@@ -1,19 +1,7 @@
-# ser225-games-site
+# SER225 Project Website
 
-## Project setup
-```
-npm install
-```
+This website can be accessed at [https://a-r-t.github.io/SER225-Project-Website/]( https://a-r-t.github.io/SER225-Project-Website/).
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## What is this website for?
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+This is a website for displaying the various projects completed by students in Quinnipiac's SER225 course.

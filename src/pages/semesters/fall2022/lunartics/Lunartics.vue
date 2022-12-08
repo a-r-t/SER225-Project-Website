@@ -16,7 +16,8 @@
       ul
         li Kevin Couillard
       h2 Game
-      img(:src="require('./assets/titlescreen.jpg')")
+      .screenshot
+        img(:src="require('./assets/titlescreen.jpg')")
       h3 About
       p Welcome to Moon Valley!
       p In this story-driven game, it is up to you to help the mysterious walrus remember who he is.

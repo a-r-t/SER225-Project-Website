@@ -17,7 +17,8 @@
       ul
         li Kyle Chutjian
       h2 Game
-      img(:src="require('./assets/titlescreen.png')")
+      .screenshot
+        img(:src="require('./assets/titlescreen.png')")
       h3 Genre
       p Survival Shooter, Horror
       h3 About

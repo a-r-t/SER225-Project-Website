@@ -17,7 +17,8 @@
       ul
         li Sadjell Mamon
       h2 Game
-      img(:src="require('./assets/titlescreen.png')")
+      .screenshot
+        img(:src="require('./assets/titlescreen.png')")
       h3 Genre
       p RPG, Puzzle
       h3 About

@@ -18,34 +18,62 @@
       ul
         li Amber Kusma
       h2 Game
-      //- img(:src="require('./assets/titlescreen.png')")
+      .screenshot
+        img(:src="require('./assets/titlescreen.png')")
+      h3 Genre
+      p RPG, Puzzle
       h3 About
-      p Welcome to Zoomania! 
-      p.no-margin An evil zookeeper has kidnapped several zoo animals, and it is up to you to journey across the globe to save them. 
-      p Watch out -- the zookeeper's plan will not be so easy to foil! 
+      p After witnessing the death of his girlfriend at the hands of a mysterious stranger, Squirrel is determined to get revenge.
+      p Beware -- you never know what lies in store on the path of vengeance.
       h3 Screenshots
       .screenshot
-        //- img(:src="require('./assets/desert-level.png')")
-        p.asset-description Desert Level
+        img(:src="require('./assets/mainmap.png')")
+        p.asset-description What's in the chest?
       .screenshot
-        //- img(:src="require('./assets/tree-level.png')")
-        p.asset-description Tree Level
-      h3 Instructions
-      p The goal of each level is to find the key, and then use that key to unlock the animal from the cage.
-      p If an enemy hits the player, they will take damage. Take enough damage and its game over.
-      h3 Notes
-      p Collecting all of the coins in every level will give you a special reward at the end party screen (hit the disco ball)!
+        img(:src="require('./assets/ghost.png')")
+        p.asset-description Look out!
+      h3 Controls
+      ul
+        li
+          strong Space bar 
+          | - interact with NPC's, open doors or chests
+        li
+          strong F key
+          | - shoot acorn
+        li
+          strong Shift key
+          | - sprint
+        li
+          strong Arrow keys
+          | - movement of player
+        li
+          strong I key
+          | - Open and close inventory
+      h3 Objectives
+      h4 Main Level
+      ul
+        li Run around the map to the four chests to collect the keys to unlock the temple in the top part of the map.
+        li Ghosts will damage you upon contact so watch out!
+        li You can launch projectiles at enemies to eliminate them, and they may drop a random powerup on defeat.
+        li Eliminating ghosts along the way gains coins and which can use the shop (house looking building) to buy health.
+        li Once you collect all four keys, you can open the temple door at the top of the map.
+      h4 Temple Level 1
+      p Talk to the table in the top center of the map for a clue on how to complete the puzzle.
+      h4 Temple Level 2
+      p Swim from platform to platform and eliminate enemies along the way until you reach the other side.
+      h4 Temple Level 3
+      p Find the key from the chest to unlock the exit. Do not walk on the lava tiles or in front of spring traps -- they will damage you!
+      h4 Temple Level 4 (Boss Fight)
+      p Duke it out with the evil warlock and take your revenge for him absolutely murking your girlfriend
       h3 Videos
       .video
-        //- video(:src="require('./assets/game-video.mp4')" controls preload="metadata")
+        video(:src="require('./assets/game-video.mp4')" controls preload="metadata")
         p.asset-description Full Game Playthrough
       h3 Downloads
       .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1crSxO2C24-0mCX-xPFIAgDQ5V76ztXA0" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)
+        a(href="https://drive.google.com/uc?export=download&id=1_O5uhHiIAz0UFMC1KzpaONV4BKvJgxhR" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)
       .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1p2ImKstl6pikelwc7YOB9Z8yVvvpvOgk" download target="_blank") Download EXE File (Windows Only)
-      .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1p2ImKstl6pikelwc7YOB9Z8yVvvpvOgk" download target="_blank") Download APP File (MacOS Only)
+        a(href="https://drive.google.com/uc?export=download&id=1p15UwGisTTSJtU9klZ9Wp8BpH2BJSIGn" download target="_blank") Download EXE File (Windows Only)
 </template>
 
 <script>

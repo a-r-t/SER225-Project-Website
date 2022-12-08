@@ -17,32 +17,32 @@
       h2 Game
       //- img(:src="require('./assets/titlescreen.png')")
       h3 About
-      p Welcome to Zoomania! 
-      p.no-margin An evil zookeeper has kidnapped several zoo animals, and it is up to you to journey across the globe to save them. 
-      p Watch out -- the zookeeper's plan will not be so easy to foil! 
-      h3 Screenshots
-      .screenshot
-        //- img(:src="require('./assets/desert-level.png')")
-        p.asset-description Desert Level
-      .screenshot
-        //- img(:src="require('./assets/tree-level.png')")
-        p.asset-description Tree Level
-      h3 Instructions
-      p The goal of each level is to find the key, and then use that key to unlock the animal from the cage.
-      p If an enemy hits the player, they will take damage. Take enough damage and its game over.
-      h3 Notes
-      p Collecting all of the coins in every level will give you a special reward at the end party screen (hit the disco ball)!
-      h3 Videos
-      .video
-        //- video(:src="require('./assets/game-video.mp4')" controls preload="metadata")
-        p.asset-description Full Game Playthrough
+      p You are under attack by zombies and ghosts!
+      p Can you survive ten nights while protecting both yourself and your castle?
+      p Hope your combat skills are up to snuff!
+      h3 Genre
+      p Survival, Tower Defense, Horror
+      //- h3 Screenshots
+      //- .screenshot
+      //-   img(:src="require('./assets/desert-level.png')")
+      //-   p.asset-description Desert Level
+      //- .screenshot
+      //-   img(:src="require('./assets/tree-level.png')")
+      //-   p.asset-description Tree Level
+      //- h3 Instructions
+      //- p The goal of each level is to find the key, and then use that key to unlock the animal from the cage.
+      //- p If an enemy hits the player, they will take damage. Take enough damage and its game over.
+      //- h3 Notes
+      //- p Collecting all of the coins in every level will give you a special reward at the end party screen (hit the disco ball)!
+      //- h3 Videos
+      //- .video
+      //-   video(:src="require('./assets/game-video.mp4')" controls preload="metadata")
+      //-   p.asset-description Full Game Playthrough
       h3 Downloads
       .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1crSxO2C24-0mCX-xPFIAgDQ5V76ztXA0" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)
+        a(href="https://drive.google.com/uc?export=download&id=10AMNTYc-JrmPwHoPkAVb5kCjF7oxjhTp" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)
       .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1p2ImKstl6pikelwc7YOB9Z8yVvvpvOgk" download target="_blank") Download EXE File (Windows Only)
-      .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1p2ImKstl6pikelwc7YOB9Z8yVvvpvOgk" download target="_blank") Download APP File (MacOS Only)
+        a(href="https://drive.google.com/uc?export=download&id=1qKUJ3WvgVleZ0-mGhp5vMVVZ3qLj52B1" download target="_blank") Download EXE File (Windows Only)
 </template>
 
 <script>
@@ -105,6 +105,11 @@ a:active {
 
 .download-container {
   margin-bottom: 10px;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
 }
 
 video {

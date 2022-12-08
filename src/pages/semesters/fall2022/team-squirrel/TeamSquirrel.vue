@@ -138,6 +138,11 @@ a:active {
   margin-bottom: 10px;
 }
 
+.video {
+  display: flex;
+  flex-direction: column;
+}
+
 video {
   max-width: 100%;
   border-radius: 7px;

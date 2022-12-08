@@ -12,39 +12,52 @@
         li Kastrijot Syla (Kash)
         li Mia Troiano
       h2 Game
-      //- img(:src="require('./assets/titlescreen.png')")
+      img(:src="require('./assets/titlescreen.png')")
       h3 About
-      p Welcome to Zoomania! 
-      p.no-margin An evil zookeeper has kidnapped several zoo animals, and it is up to you to journey across the globe to save them. 
-      p Watch out -- the zookeeper's plan will not be so easy to foil! 
+      p Inspired by Jordan Peele's movie 
+        em 
+          a(href="https://www.imdb.com/title/tt10954984/") Nope
+        | , 
+        em Yup! 
+        | is a game where you play from the POV of Lucky the Horse and attempt to defeat the UFO.
+      p There will be many obstacles and hazards in Lucky's way, but this horse is determined to defend the ranch and the people that care for him.
+      p Along the way, Lucky will journey around the central locations and interact with the main characters from the movie.
+      h3 Genre
+      p Puzzle
       h3 Screenshots
       .screenshot
-        //- img(:src="require('./assets/desert-level.png')")
-        p.asset-description Desert Level
+        img(:src="require('./assets/jupiters-claim.png')")
+        p.asset-description In-game recreation of Jupiter's Claim from the movie Nope
       .screenshot
-        //- img(:src="require('./assets/tree-level.png')")
-        p.asset-description Tree Level
+        img(:src="require('./assets/final-puzzle.png')")
+        p.asset-description Watch out!
       h3 Instructions
-      p The goal of each level is to find the key, and then use that key to unlock the animal from the cage.
-      p If an enemy hits the player, they will take damage. Take enough damage and its game over.
+      p Navigate Lucky the Horse around the map to portals, which lead to puzzles that need to be completed. 
+      p Complete each puzzle to unlock the final puzzle where you need to avoid the UFO and go into the glass box.
+      p Controls:
+      ul
+        li Use the arrow keys to move.
+        li Use spacebar to interact with objects, portals and NPCS.
+        li Press P to use the pause menu.
       h3 Notes
-      p Collecting all of the coins in every level will give you a special reward at the end party screen (hit the disco ball)!
-      h3 Videos
-      .video
-        //- video(:src="require('./assets/game-video.mp4')" controls preload="metadata")
-        p.asset-description Full Game Playthrough
+      p You have to complete all five puzzles to win the game.
+        | Four of the puzzles are unlocked from the start.
+        | The 5th one is hidden and locked until all four starting puzzles have been completed.
+      p There is a bug in our game where you randomly die...but the game will let you respawn from where you were at when you died so it's all good...
+      //- h3 Videos
+      //- .video
+      //-   video(:src="require('./assets/game-video.mp4')" controls preload="metadata")
+      //-   p.asset-description Full Game Playthrough
       h3 Downloads
       .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1crSxO2C24-0mCX-xPFIAgDQ5V76ztXA0" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)
+        a(href="https://drive.google.com/uc?export=download&id=1aprr6XeybK1zK2d9_tK-lqXzLOcV_Gib" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)
       .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1p2ImKstl6pikelwc7YOB9Z8yVvvpvOgk" download target="_blank") Download EXE File (Windows Only)
-      .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1p2ImKstl6pikelwc7YOB9Z8yVvvpvOgk" download target="_blank") Download APP File (MacOS Only)
+        a(href="https://drive.google.com/uc?export=download&id=1twfFA0ERSUszkbex2h_ighE9hhEQ83pP" download target="_blank") Download EXE File (Windows Only)
 </template>
 
 <script>
 export default {
-  name: 'Mean Turtles'
+  name: 'MeanTurtles'
 }
 </script>
 
@@ -102,6 +115,11 @@ a:active {
 
 .download-container {
   margin-bottom: 10px;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
 }
 
 video {

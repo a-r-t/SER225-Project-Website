@@ -16,34 +16,43 @@
       ul
         li Kevin Couillard
       h2 Game
-      //- img(:src="require('./assets/titlescreen.png')")
+      img(:src="require('./assets/titlescreen.jpg')")
       h3 About
-      p Welcome to Zoomania! 
-      p.no-margin An evil zookeeper has kidnapped several zoo animals, and it is up to you to journey across the globe to save them. 
-      p Watch out -- the zookeeper's plan will not be so easy to foil! 
+      p Welcome to Moon Valley!
+      p In this story-driven game, it is up to you to help the mysterious walrus remember who he is.
+      p Along the journey, you will explore many different biomes and come across some very zany characters -- hope you're prepared for the ride!
+      h3 Genre
+      p RPG
       h3 Screenshots
       .screenshot
-        //- img(:src="require('./assets/desert-level.png')")
-        p.asset-description Desert Level
+        img(:src="require('./assets/desert-biome.jpg')")
+        p.asset-description Desert Biome
       .screenshot
-        //- img(:src="require('./assets/tree-level.png')")
-        p.asset-description Tree Level
+        img(:src="require('./assets/inventory.jpg')")
+        p.asset-description Inventory Screen
       h3 Instructions
-      p The goal of each level is to find the key, and then use that key to unlock the animal from the cage.
-      p If an enemy hits the player, they will take damage. Take enough damage and its game over.
+      ul
+        li Go to the controls menu option to learn how to play the game (hit space to select a menu option).
+        li There are a total of 5 areas to explore and access through the use of collectibles and quests. 
+        li The main questbearer that sets a heavy plot in motion, is the blue walrus on the starting map. Listen to the walrus carefully.
+        li Through some quests, there is an ability to obtain and place furniture within a house (or even outside) by placing it and interacting with it.
+        li There is also an ability to put on and remove clothing from within the inventory.
+        li You can enter a house by approaching the door and pressing space (except in the mountains biome, press space on the lower ladder).
       h3 Notes
-      p Collecting all of the coins in every level will give you a special reward at the end party screen (hit the disco ball)!
+      p Finishing the main quests yields a really cool effect with the starting map walrus.
+      p To put on clothes, go to the inventory and hit the "Equip Clothes" button on a wearable item. 
+        | They can be removed by going back to the inventory and hitting the "Remove Clothes" button.
+      p To place furniture, go to the inventory and hit the "Place" button.
+        | Hit space while in front of the furniture to move it to a desired location, and hit space again to drop it to that location.
       h3 Videos
       .video
-        //- video(:src="require('./assets/game-video.mp4')" controls preload="metadata")
+        video(:src="require('./assets/game-video.mp4')" controls preload="metadata")
         p.asset-description Full Game Playthrough
       h3 Downloads
       .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1crSxO2C24-0mCX-xPFIAgDQ5V76ztXA0" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)
+        a(href="https://drive.google.com/uc?export=download&id=17FQBEqEYobbL4JqNu31y_y5uKNYDaPQ9" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)
       .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1p2ImKstl6pikelwc7YOB9Z8yVvvpvOgk" download target="_blank") Download EXE File (Windows Only)
-      .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1p2ImKstl6pikelwc7YOB9Z8yVvvpvOgk" download target="_blank") Download APP File (MacOS Only)
+        a(href="https://drive.google.com/uc?export=download&id=1VlGXKSgk9XeGf1wlZjJ-Q7hBc6xYpHG3" download target="_blank") Download EXE File (Windows Only)
 </template>
 
 <script>
@@ -106,6 +115,11 @@ a:active {
 
 .download-container {
   margin-bottom: 10px;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
 }
 
 video {

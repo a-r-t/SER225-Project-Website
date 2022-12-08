@@ -9,10 +9,10 @@
       h2 What is SER225?
       .paragraph-container
         p SER225 is the (in)famous Intro to Software Development course. 
-        p.indent Students are put into assigned groups, given a base project, and learn how to use and apply Agile Methodology principles and values in order to develop the project further in their own desired direction.
+        p Students are put into assigned groups, given a base project, and learn how to use and apply Agile Methodology principles and values in order to develop the project further in their own desired direction.
           | Traditionally, the base project given out is a game of some kind (platformer, RPG, etc.).
           | The teams of students go through a phase where the plan out the direction they want to take the game in, and strategize how they are going to make the most out of their Sprints to get all the highest priority work done.
-        p.indent During this course, students learn how to put all of the programming fundamentals they learned in previous courses into practice.
+        p During this course, students learn how to put all of the programming fundamentals they learned in previous courses into practice.
           | They also improve on their communication, problem-solving, time management, and version control skills.
           | Finally, the "workplace simulation" that is put into place during this course gives students familiarity with how work gets done in the industry,
           | which not only prepares them for internships and jobs, but also gets them excited for their futures and builds their confidence.
@@ -74,10 +74,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.indent {
-  text-indent: 50px;
 }
 
 a {

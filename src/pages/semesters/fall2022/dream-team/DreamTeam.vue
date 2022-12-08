@@ -19,8 +19,10 @@
       img(:src="require('./assets/titlescreen.png')")
       h3 About
       p Welcome to Zoomania! 
-      p.no-margin An evil zookeeper has kidnapped several zoo animals, and it is up to you to journey across the globe to save them. 
+      p An evil zookeeper has kidnapped several zoo animals, and it is up to you to journey across the globe to save them. 
       p Watch out -- the zookeeper's plan will not be so easy to foil! 
+      h3 Genre
+      p Platformer
       h3 Screenshots
       .screenshot
         img(:src="require('./assets/desert-level.png')")
@@ -28,9 +30,14 @@
       .screenshot
         img(:src="require('./assets/tree-level.png')")
         p.asset-description Tree Level
+      .screenshot
+        img(:src="require('./assets/underwater-level.png')")
+        p.asset-description Underwater Level
       h3 Instructions
-      p The goal of each level is to find the key, and then use that key to unlock the animal from the cage.
-      p If an enemy hits the player, they will take damage. Take enough damage and its game over.
+      p Your goal is to use arrow keys to move left, right, and jump through the level to hit the caged animal at the end and free them!
+      p Hit space to select anything. 
+      p P to pause, and Command Q to quit. 
+      p You will be taken through a tutorial level prior to the start of the game that will explain the goals and storyline.
       h3 Notes
       p Collecting all of the coins in every level will give you a special reward at the end party screen (hit the disco ball)!
       h3 Videos
@@ -39,11 +46,9 @@
         p.asset-description Full Game Playthrough
       h3 Downloads
       .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1crSxO2C24-0mCX-xPFIAgDQ5V76ztXA0" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)
+        a(href="https://drive.google.com/uc?export=download&id=1h-P83zhyLtC_2ilcdJZGz5s8oJ9KxN60" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)
       .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1p2ImKstl6pikelwc7YOB9Z8yVvvpvOgk" download target="_blank") Download EXE File (Windows Only)
-      .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1p2ImKstl6pikelwc7YOB9Z8yVvvpvOgk" download target="_blank") Download APP File (MacOS Only)
+        a(href="https://drive.google.com/uc?export=download&id=1I_AAKXw4kuWQYbIW5T54TkaPVoQcW1BD" download target="_blank") Download EXE File (Windows Only)
 </template>
 
 <script>

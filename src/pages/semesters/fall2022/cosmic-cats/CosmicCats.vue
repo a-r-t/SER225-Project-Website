@@ -17,34 +17,45 @@
       ul
         li Isaac Crawford
       h2 Game
-      //- img(:src="require('./assets/titlescreen.png')")
+      .screenshot
+        img(:src="require('./assets/titlescreen.png')")
       h3 About
-      p Welcome to Zoomania! 
-      p.no-margin An evil zookeeper has kidnapped several zoo animals, and it is up to you to journey across the globe to save them. 
-      p Watch out -- the zookeeper's plan will not be so easy to foil! 
+      p Oh no! Cat's kittens have been stolen by an evil space dog.
+      p Cat will do anything to save them...no matter what it takes.
+      h3 Genre
+      p Platformer, Runner
       h3 Screenshots
       .screenshot
-        //- img(:src="require('./assets/desert-level.png')")
-        p.asset-description Desert Level
+        img(:src="require('./assets/intro-video.png')")
+        p.asset-description Intro Sequence
       .screenshot
-        //- img(:src="require('./assets/tree-level.png')")
-        p.asset-description Tree Level
+        img(:src="require('./assets/level2.png')")
+        p.asset-description Level 2
+      .screenshot
+        img(:src="require('./assets/level4.png')")
+        p.asset-description Level 4
       h3 Instructions
-      p The goal of each level is to find the key, and then use that key to unlock the animal from the cage.
-      p If an enemy hits the player, they will take damage. Take enough damage and its game over.
+      p A Space Dog came to earth and stole a cat’s kittens. 
+        | Your goal is to traverse through each level and finally fight the Dog in the last level to save the kittens. 
+      p Controls: 
+      ul
+        li Use the arrow keys on the keyboard for movement
+        li At the start of the game, you can click on the space bar to skip the intro sequence
+        li In Level 2, press the Q Key to shoot
+        li In Level 4, press the Q key while in the air to attack the enemy
       h3 Notes
-      p Collecting all of the coins in every level will give you a special reward at the end party screen (hit the disco ball)!
+      p You need to collect all of the collectables in Level 4 to have access to the boss fight.
+      p You can click the M key to change the background music to one of the available options.
+      p Collecting at least three collectables in each level increases your health by 1.
       h3 Videos
       .video
-        //- video(:src="require('./assets/game-video.mp4')" controls preload="metadata")
+        video(:src="require('./assets/game-video.mp4')" controls preload="metadata")
         p.asset-description Full Game Playthrough
       h3 Downloads
       .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1crSxO2C24-0mCX-xPFIAgDQ5V76ztXA0" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)
+        a(href="https://drive.google.com/uc?export=download&id=1JoFEdb7Clny0HbT6xMEkjsFCAHMYtTK6" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)
       .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1p2ImKstl6pikelwc7YOB9Z8yVvvpvOgk" download target="_blank") Download EXE File (Windows Only)
-      .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1p2ImKstl6pikelwc7YOB9Z8yVvvpvOgk" download target="_blank") Download EXE File (Windows Only)
+        a(href="https://drive.google.com/uc?export=download&id=1pnDqkRgUGeyeWjC2umQ7znNAcj2UVgo6" download target="_blank") Download EXE File (Windows Only)
 </template>
 
 <script>
@@ -107,6 +118,11 @@ a:active {
 
 .download-container {
   margin-bottom: 10px;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
 }
 
 video {

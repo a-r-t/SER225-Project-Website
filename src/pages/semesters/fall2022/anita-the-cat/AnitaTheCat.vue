@@ -19,13 +19,13 @@
       h2 Game
       .screenshot
         img(:src="require('./assets/titlescreen.png')")
-      h3 Genre
-      p RPG, Puzzle
       h3 About
       p Welcome to Witchy Cat! 
       p Join Anita the Cat in her quest to create a mysterious magic potion!
       p You will explore various different areas representing the four seasons in order to find the ingredients needed.
       p What does this potion do exactly? Well...you're just going to have to find out.
+      h3 Genre
+      p RPG, Puzzle
       h3 Screenshots
       .screenshot
         img(:src="require('./assets/autumn.png')")

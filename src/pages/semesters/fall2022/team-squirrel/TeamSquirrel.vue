@@ -20,11 +20,11 @@
       h2 Game
       .screenshot
         img(:src="require('./assets/titlescreen.png')")
-      h3 Genre
-      p RPG, Puzzle
       h3 About
       p After witnessing the death of his girlfriend at the hands of a mysterious stranger, Squirrel is determined to get revenge.
       p Beware -- you never know what lies in store on the path of vengeance.
+      h3 Genre
+      p RPG, Puzzle
       h3 Screenshots
       .screenshot
         img(:src="require('./assets/mainmap.png')")

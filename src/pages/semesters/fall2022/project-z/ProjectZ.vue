@@ -19,12 +19,12 @@
       h2 Game
       .screenshot
         img(:src="require('./assets/titlescreen.png')")
-      h3 Genre
-      p Survival Shooter, Horror
       h3 About
       p Play Project Z...if you dare! 
       p An endless horde of zombies are coming at you -- are you ready to fight to survive?
       p Don't go alone! You can team up with a friend and get them in on the action in co-op mode.
+      h3 Genre
+      p Survival Shooter, Horror
       h3 Screenshots
       .screenshot
         img(:src="require('./assets/single-player.png')")

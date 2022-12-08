@@ -123,7 +123,10 @@ a:active {
 }
 
 video {
+  margin-right: auto;
+  margin-left: auto;
   max-width: 100%;
   border-radius: 7px;
+  border: 2px solid #253C59;
 }
 </style>

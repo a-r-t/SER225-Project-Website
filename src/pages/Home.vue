@@ -28,8 +28,13 @@
       .paragraph-container
         p The base project changes every so often, but most recently the students were given the options between two different games to start with -- a platformer or a top-down styled RPG.
         h3 Platformer
-
-      
+        a.github-link(href="https://github.com/a-r-t/SER-225-Game-Platformer") GitHub Repo
+        video(:src="require('../assets/platformer-gameplay.mp4')" controls preload="metadata")
+        p.asset-description Demo
+        h3 RPG
+        a.github-link(href="https://github.com/a-r-t/SER-225-Game-RPG") GitHub Repo
+        video(:src="require('../assets/rpg-gameplay.mp4')" controls preload="metadata")
+        p.asset-description Demo      
 </template>
 
 <script>
@@ -73,5 +78,34 @@ export default {
 
 .indent {
   text-indent: 50px;
+}
+
+a {
+  color: #253C59;
+}
+
+a:active {
+  color: #8a5f11;
+}
+
+.github-link {
+  margin-bottom: 10px;
+}
+
+video {
+  max-width: 100%;
+  border-radius: 7px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 2px solid #253C59;
+}
+
+.asset-description {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 5px;
+  font-style: italic;
+  margin-bottom: 30px;
 }
 </style>

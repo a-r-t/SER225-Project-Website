@@ -145,5 +145,6 @@ video {
   border-radius: 7px;
   margin-right: auto;
   margin-left: auto;
+  border: 2px solid #253C59;
 }
 </style>

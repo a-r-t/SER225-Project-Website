@@ -146,5 +146,8 @@ a:active {
 video {
   max-width: 100%;
   border-radius: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #253C59;
 }
 </style>

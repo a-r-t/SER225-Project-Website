@@ -44,10 +44,10 @@
         | Four of the puzzles are unlocked from the start.
         | The 5th one is hidden and locked until all four starting puzzles have been completed.
       p There is a bug in our game where you randomly die...but the game will let you respawn from where you were at when you died so it's all good...
-      //- h3 Videos
-      //- .video
-      //-   video(:src="require('./assets/game-video.mp4')" controls preload="metadata")
-      //-   p.asset-description Full Game Playthrough
+      h3 Videos
+      .video
+        video(:src="require('./assets/game-video.mp4')" controls preload="metadata")
+        p.asset-description Full Game Playthrough
       h3 Downloads
       .download-container
         a(href="https://drive.google.com/uc?export=download&id=1aprr6XeybK1zK2d9_tK-lqXzLOcV_Gib" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)

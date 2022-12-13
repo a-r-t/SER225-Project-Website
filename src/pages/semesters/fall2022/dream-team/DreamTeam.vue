@@ -16,7 +16,8 @@
       ul
         li Samantha Spinner (Sammi)
       h2 Game
-      img(:src="require('./assets/titlescreen.png')")
+      .screenshot
+        img(:src="require('./assets/titlescreen.png')")
       h3 About
       p Welcome to Zoomania! 
       p An evil zookeeper has kidnapped several zoo animals, and it is up to you to journey across the globe to save them. 

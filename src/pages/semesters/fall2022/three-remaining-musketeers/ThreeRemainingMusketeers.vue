@@ -15,29 +15,49 @@
       ul
         li Aidan Schmid
       h2 Game
-      //- img(:src="require('./assets/titlescreen.png')")
+      .screenshot
+        img(:src="require('./assets/titlescreen.png')")
       h3 About
       p You are under attack by zombies and ghosts!
       p Can you survive ten nights while protecting both yourself and your castle?
       p Hope your combat skills are up to snuff!
       h3 Genre
       p Survival, Tower Defense, Horror
-      //- h3 Screenshots
-      //- .screenshot
-      //-   img(:src="require('./assets/desert-level.png')")
-      //-   p.asset-description Desert Level
-      //- .screenshot
-      //-   img(:src="require('./assets/tree-level.png')")
-      //-   p.asset-description Tree Level
-      //- h3 Instructions
-      //- p The goal of each level is to find the key, and then use that key to unlock the animal from the cage.
-      //- p If an enemy hits the player, they will take damage. Take enough damage and its game over.
-      //- h3 Notes
-      //- p Collecting all of the coins in every level will give you a special reward at the end party screen (hit the disco ball)!
-      //- h3 Videos
-      //- .video
-      //-   video(:src="require('./assets/game-video.mp4')" controls preload="metadata")
-      //-   p.asset-description Full Game Playthrough
+      h3 Screenshots
+      .screenshot
+        img(:src="require('./assets/gameplay.png')")
+        p.asset-description Here they come!
+      h3 Instructions
+      ul
+        li Move: Arrow keys
+        li Pause: P
+        ul
+          li Makes player and base invincible while game is paused
+          li Press space while option is highlighted to select it
+        li Press G to equip weapons 
+        li Attack: Enemies are automatically attacked when you are near them and in the range of your weapon
+        li Equip weapons
+        ul
+          li H: axe
+          ul
+            li Great attack damage with decent/ok range
+          li J: spear
+          ul
+            li Has the best attack range but has the weakest damage
+          li K: machete
+          ul
+            li Highest attack damage but has the lowest range 
+          li L: katana
+          ul
+            li Second highest damage with good range
+        li Inventory
+          ul
+            li Press I to open inventory
+            li To upgrade weapons, use the arrow keys again to highlight the upgrade material (steel) then press enter and your selected weapon and it will have a bonus increase to damage
+      h3 Videos
+      .video
+        video(:src="require('./assets/game-video.mp4')" controls preload="metadata")
+        p.asset-description Full Game Playthrough
       h3 Downloads
       .download-container
         a(href="https://drive.google.com/uc?export=download&id=10AMNTYc-JrmPwHoPkAVb5kCjF7oxjhTp" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)

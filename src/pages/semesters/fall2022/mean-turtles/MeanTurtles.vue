@@ -12,7 +12,8 @@
         li Kastrijot Syla (Kash)
         li Mia Troiano
       h2 Game
-      img(:src="require('./assets/titlescreen.png')")
+      .screenshot
+        img(:src="require('./assets/titlescreen.png')")
       h3 About
       p Inspired by Jordan Peele's movie 
         em 

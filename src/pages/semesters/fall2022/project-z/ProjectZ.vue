@@ -66,6 +66,9 @@
       .video
         video(:src="require('./assets/single-player.mp4')" controls preload="metadata")
         p.asset-description Single-Player Gameplay
+      .video
+        video(:src="require('./assets/co-op.mp4')" controls preload="metadata")
+        p.asset-description Co-op Gameplay
       h3 Downloads
       .download-container
         a(href="https://drive.google.com/uc?export=download&id=1OwfyBg3JmUJwAO1b5rR6IIXqZrmzg5LV" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)

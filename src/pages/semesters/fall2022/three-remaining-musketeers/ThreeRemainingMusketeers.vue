@@ -40,7 +40,7 @@
         ul
           li H: axe
           ul
-            li Great attack damage with decent/ok range
+            li Great attack damage with decent range
           li J: spear
           ul
             li Has the best attack range but has the weakest damage

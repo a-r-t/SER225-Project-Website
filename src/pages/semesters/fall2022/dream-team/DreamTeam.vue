@@ -34,7 +34,7 @@ export default {
   },
   data() {
     return {
-      teamName: 'DreamTeam',
+      teamName: 'Dream Team',
       repoUrl: 'https://github.com/Taylorlea43/DreamTeam-Platformer',
       developerNames: [
         'Emilio Cruz',

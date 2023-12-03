@@ -9,9 +9,10 @@
       strong Developers:
       ul
         li(v-for="developerName in developerNames" :key="developerName") {{ developerName }}
-      strong Managers: 
-      ul
-        li(v-for="managerName in managerNames" :key="managerName") {{ managerName }}
+      .managers(v-if="managerNames.length > 0")
+        strong Managers: 
+        ul
+          li(v-for="managerName in managerNames" :key="managerName") {{ managerName }}
       h2 Game
       .screenshot
         img(:src="heroScreenshotFilePath")
@@ -19,20 +20,21 @@
       slot(name="about")
       h3 Genre
       p {{ genre }}
-      h3 Screenshots
-      .screenshot(v-for="screenshot in screenshots" :key="screenshot.filePath")
-        img(:src="screenshot.filePath")
-        p.asset-description {{ screenshot.description }}
+      .screenshots(v-if="screenshots.length > 0")
+        h3 Screenshots
+        .screenshot(v-for="screenshot in screenshots" :key="screenshot.filePath")
+          img(:src="screenshot.filePath")
+          p.asset-description {{ screenshot.description }}
       h3 Instructions
       slot(name="instructions")
       h3 Notes
       slot(name="notes")
       h3 Videos
-      .video(v-for="video in videos" :key="video.filePath")
+      .video(v-for="video in videos" :key="video.filePath" v-if="videos.length > 0")
         video(:src="`${video.filePath}`" controls preload="metadata")
         p.asset-description {{ video.description }}
       h3 Downloads
-      .download-container(v-for="download in downloads" :key="download.url")
+      .download-container(v-for="download in downloads" :key="download.url" v-if="downloads.length > 0")
         a(:href="download.url" download target="_blank") {{ download.description }}
 </template>
 

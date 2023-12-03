@@ -1,17 +1,20 @@
 <template lang="pug">
 .root
   Fall2022(v-if="semester === 'fall2022'" :team="team")
+  Fall2022(v-else-if="semester === 'fall2023'" :team="team")
   template(v-else)
     p.error-message Invalid Semester!
 </template>
 
 <script>
 import Fall2022 from './semesters/Fall2022.vue'
+import Fall2023 from './semesters/Fall2023.vue'
 
 export default {
   name: 'Team',
   components: {
-    Fall2022
+    Fall2022,
+    Fall2023
   },
   data() {
     return {

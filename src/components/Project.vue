@@ -14,7 +14,7 @@
         ul
           li(v-for="managerName in managerNames" :key="managerName") {{ managerName }}
       h2 Game
-      .screenshot
+      .screenshot(v-if="heroScreenshotFilePath")
         img(:src="heroScreenshotFilePath")
       h3 About
       slot(name="about")

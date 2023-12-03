@@ -1,42 +1,23 @@
 <template lang="pug">
 .root
-  .outer-container
-    .container
-      h1 Anita the Cat
-      .repo
-        a(href="https://github.com/jjnoga/Witchy-Cat-Game") GitHub Repo
-      h2 Team Members
-      strong Developers:
-      ul
-        li Camryn Keller
-        li Joseph Noga (Joe)
-        li Madigan Smith
-        li Michael Ruocco
-        li Nicholas Centeno (Nic)
-      strong Managers: 
-      ul
-        li Sadjell Mamon
-      h2 Game
-      .screenshot
-        img(:src="require('./assets/titlescreen.png')")
-      h3 About
+  Project(
+    :projectAssetDirectory="projectAssetDirectory",
+    :teamName="teamName",
+    :repoUrl="repoUrl",
+    :developerNames="developerNames"
+    :managerNames="managerNames"
+    :heroScreenshotFilePath="heroScreenshotFilePath"
+    :genre="genre",
+    :screenshots="screenshots",
+    :videos="videos",
+    :downloads="downloads"
+  )
+    template(v-slot:about)
       p Welcome to Witchy Cat! 
       p Join Anita the Cat in her quest to create a mysterious magic potion!
       p You will explore various different areas representing the four seasons in order to find the ingredients needed.
       p What does this potion do exactly? Well...you're just going to have to find out.
-      h3 Genre
-      p RPG, Puzzle
-      h3 Screenshots
-      .screenshot
-        img(:src="require('./assets/autumn.png')")
-        p.asset-description Autumn
-      .screenshot
-        img(:src="require('./assets/winter.png')")
-        p.asset-description Winter
-      .screenshot
-        img(:src="require('./assets/summer.png')")
-        p.asset-description Summer
-      h3 Instructions
+    template(v-slot:instructions)
       p Your goal is to travel through every seasonal-based area and collect three key items in order to create a potion: 
       ul 
         li Golden Leaf from the Autumn Zone
@@ -61,20 +42,61 @@
         li The boat spawned by the potion appears at the bottom of the Spring Zone map.
         li There is a noticeable lag spike when picking up the Fish in the Spring Zone, should you end up dropping it from your inventory.
         li DO NOT DROP THE STAFF WHILE IN THE MAZE. YOU MAY GET SOFTLOCKED.
-      h3 Videos
-      .video
-        video(:src="require('./assets/game-video.mp4')" controls preload="metadata")
-        p.asset-description Full Game Playthrough
-      h3 Downloads
-      .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1FJOzq6t0l1sboO72krEiK2XMVmVcNTf1" download target="_blank") Download JAR File (must have Java 1.8 or greater installed)
-      .download-container
-        a(href="https://drive.google.com/uc?export=download&id=1E84i6VnUN_M40zPxWoUSzLUNyRZsCZel" download target="_blank") Download EXE File (Windows Only)
 </template>
 
 <script>
+import Project from '../../../../components/Project.vue'
+
 export default {
-  name: 'AnitaTheCat'
+  name: 'AnitaTheCat',
+  components: {
+    Project
+  },
+  data() {
+    return {
+      projectAssetDirectory: '',
+      teamName: 'Anita the Cat',
+      repoUrl: 'https://github.com/jjnoga/Witchy-Cat-Game',
+      developerNames: [
+        'Camryn Keller',
+        'Joseph Noga (Joe)',
+        'Madigan Smith (Madi)',
+        'Michael Ruocco',
+        'Nicholas Centeno (Nic)'
+      ],
+      managerNames: [
+        'Sadjell Mamon'
+      ],
+      heroScreenshotFilePath: require('./assets/titlescreen.png'),
+      genre: 'RPG, Puzzle',
+      screenshots: [
+        {
+          filePath: require('./assets/autumn.png'),
+          description: 'Autumn'
+        },
+        {
+          filePath: require('./assets/winter.png'),
+          description: 'Winter'
+        },
+        {
+          filePath: require('./assets/summer.png'),
+          description: 'Summer'
+        }
+      ],
+      videos: [
+        {
+          filePath: require('./assets/game-video.mp4'),
+          description: 'Full Game Playthrough'
+        }
+      ],
+      downloads: [
+        {
+          url: 'https://drive.google.com/uc?export=download&id=1FJOzq6t0l1sboO72krEiK2XMVmVcNTf1',
+          description: 'Download JAR File (must have Java 1.8 or greater installed)'
+        }
+      ]
+    }
+  }
 }
 </script>
 

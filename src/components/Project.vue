@@ -14,7 +14,7 @@
         ul
           li(v-for="managerName in managerNames" :key="managerName") {{ managerName }}
       h2 Game
-      .screenshot
+      .screenshot(v-if="heroScreenshotFilePath")
         img(:src="heroScreenshotFilePath")
       h3 About
       slot(name="about")
@@ -29,10 +29,11 @@
       slot(name="instructions")
       h3 Notes
       slot(name="notes")
-      h3 Videos
-      .video(v-for="video in videos" :key="video.filePath" v-if="videos.length > 0")
-        video(:src="`${video.filePath}`" controls preload="metadata")
-        p.asset-description {{ video.description }}
+      .videos(v-if="videos.length > 0")
+        h3 Videos
+        .video(v-for="video in videos" :key="video.filePath")
+          video(:src="`${video.filePath}`" controls preload="metadata")
+          p.asset-description {{ video.description }}
       h3 Downloads
       .download-container(v-for="download in downloads" :key="download.url" v-if="downloads.length > 0")
         a(:href="download.url" download target="_blank") {{ download.description }}

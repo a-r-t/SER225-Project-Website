@@ -95,6 +95,138 @@
           ]
         }
       ]
+    },
+    {
+      "semester": "fall2023",
+      "display": "Fall 2023",
+      "teams": [
+        {
+          "team": "3-2",
+          "display": "3-2",
+          "members": [
+            { "name": "Aidan Armellino" },
+            { "name": "Angela Bruno" },
+            { "name": "Cole Davignon" },
+            { "name": "Javier Flores", "alias": "Javi Flores" },
+            { "name": "Rion-Mark McLaren", "alias": "Rion McLaren" }
+          ]
+        },
+        {
+          "team": "art",
+          "display": "ART",
+          "members": [
+            { "name": "Brooks Jackson" },
+            { "name": "Connor Ryan" },
+            { "name": "Hayden Lacy" },
+            { "name": "Julia Bock" },
+            { "name": "Ryan Sliger" }
+          ]
+        },
+        {
+          "team": "devdynasty",
+          "display": "devDynasty",
+          "members": [
+            { "name": "Alex Power" },
+            { "name": "Christian Kilduff" },
+            { "name": "Ryan Fennelly" },
+            { "name": "Timothy McGinley", "alias": "Tim McGinley" },
+            { "name": "Zoe McLaughlin" },
+            { "name": "Chris Rocco" }
+          ]
+        },
+        {
+          "team": "dream-team-2.0",
+          "display": "Dream Team 2.0",
+          "members": [
+            { "name": "Ethan Lanier" },
+            { "name": "Henry Cort" },
+            { "name": "Klaus Schroeder" },
+            { "name": "Thomas Morrissey" },
+            { "name": "Emilio Cruz" }
+          ]
+        },
+        {
+          "team": "elemental-hero",
+          "display": "Elemental Hero",
+          "members": [
+            { "name": "Hunter Yocum" },
+            { "name": "Lukas Martino" },
+            { "name": "Peter Zagarek" },
+            { "name": "Philip Nora" },
+            { "name": "Kevin Rodriguez" }
+          ]
+        },
+        {
+          "team": "error101",
+          "display": "ERROR101",
+          "members": [
+            { "name": "Charlize Aponte" },
+            { "name": "Gregory Jean-Baptiste", "alias": "Greg Jean-Baptiste" },
+            { "name": "Jason Jackson" },
+            { "name": "Jon Cela" },
+            { "name": "Shannon Gill" },
+            { "name": "Julia Woeste" }
+          ]
+        },
+        {
+          "team": "firefox",
+          "display": "FireFox",
+          "members": [
+            { "name": "Aaron Toomer" },
+            { "name": "Calvin Pancavage" },
+            { "name": "Evan Quinn" },
+            { "name": "Juliet Lombardi" },
+            { "name": "Shannon Brickett" },
+            { "name": "Matthew Nova", "alias": "Matt Nova" }
+          ]
+        },
+        {
+          "team": "let-us-cook",
+          "display": "Let Us Cook",
+          "members": [
+            { "name": "Caden Effrece" },
+            { "name": "Kyle MacDonald" },
+            { "name": "Marcus Ferreira" },
+            { "name": "Riley Damasco" },
+            { "name": "William Regan", "alias": "Bill Regan" },
+            { "name": "Brian Wanamaker" }
+          ]
+        },
+        {
+          "team": "onlygit",
+          "display": "OnlyGit",
+          "members": [
+            { "name": "Cameron Anthony" },
+            { "name": "Carmine Andranovich" },
+            { "name": "Mohith Donthu" },
+            { "name": "Haig Mesrobian" },
+            { "name": "William Siri", "alias": "Billy Siri" }
+          ]
+        },
+        {
+          "team": "team-plasma",
+          "display": "Team Plasma",
+          "members": [
+            { "name": "Caleb Muriuki-Mureithi" },
+            { "name": "Christopher Anzilotti", "alias": "Chris Anzilotti" },
+            { "name": "Lucas Jenkins" },
+            { "name": "Omar Fofana" },
+            { "name": "SeSe Allerheiligen" },
+            { "name": "Humna Hanif" }
+          ]
+        },
+        {
+          "team": "xoxo-gossip-girl",
+          "display": "XOXO, Gossip Girl",
+          "members": [
+            { "name": "Aamnah Malik" },
+            { "name": "Gabriella Pierce", "alias": "Gabby Pierce" },
+            { "name": "Milena Silva" },
+            { "name": "Tess Bossdorf" },
+            { "name": "Emily Balboni" }
+          ]
+        }
+      ]
     }
   ]
 }

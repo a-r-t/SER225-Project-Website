@@ -70,7 +70,7 @@ export default {
       downloads: [
         {
           url: 'https://drive.google.com/uc?export=download&id=1h-P83zhyLtC_2ilcdJZGz5s8oJ9KxN60',
-          description: 'Download JAR File (must have Java 1.8 or greater installed)'
+          description: 'Download JAR File (must have Java 8 or greater installed)'
         }
       ]
     }

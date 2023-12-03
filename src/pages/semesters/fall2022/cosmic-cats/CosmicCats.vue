@@ -43,7 +43,7 @@ export default {
       repoUrl: 'https://github.com/lucasmore244/SER225_Platformer',
       developerNames: [
         'Lucas Morello',
-        'Momoreoluwa Ayinde (Moore)',
+        'Momoreoluwa Ayinde (Momore)',
         'Ohm Patel',
         'Rom Wasserman',
         'Steven Griffin'

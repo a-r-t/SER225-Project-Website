@@ -12,7 +12,10 @@
     :downloads="downloads"
   )
     template(v-slot:about)
-      p N/A
+      i Lab Run 
+        span is here and ready to shake up the platformer formula!
+      p The name of the game is to strategically switch gravity as you make your way through each level.
+      p If you want a challenge, look no further -- this game will test you!
     template(v-slot:instructions)
       p N/A
     template(v-slot:notes)
@@ -40,7 +43,7 @@ export default {
       managerNames: [
         'Emilio Cruz'
       ],
-      heroScreenshotFilePath: '',
+      heroScreenshotFilePath: require('./assets/titlescreen.png'),
       genre: 'Platformer, Action',
       screenshots: [],
       videos: [],

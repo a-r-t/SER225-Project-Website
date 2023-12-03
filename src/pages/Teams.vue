@@ -61,7 +61,7 @@ export default {
               value: team.team
             }
           })
-        this.teams.sort((a, b) => (a.display > b.display) ? 1 : -1)
+        this.teams.sort((a, b) => (a.display.toLowerCase() > b.display.toLowerCase()) ? 1 : -1)
       }
       return this.$router.replace({ path: this.$route.path, query: {...this.$route.query, semester: this.selectedSemester ? this.selectedSemester.value : undefined }})
         .catch(() => {})

@@ -12,7 +12,11 @@
     :downloads="downloads"
   )
     template(v-slot:about)
-      p N/A
+      p Max needs you to help them find their way back home!
+      p In 
+        i Escape: Back to Reality
+        span , you must run, jump, and fight your way through each level.
+      p Watch out! This will be a very perilous journey...
     template(v-slot:instructions)
       p N/A
     template(v-slot:notes)
@@ -41,8 +45,8 @@ export default {
       managerNames: [
         'Julia Woeste'
       ],
-      heroScreenshotFilePath: '',
-      genre: 'Platformer, Action',
+      heroScreenshotFilePath: require('./assets/titlescreen.png'),
+      genre: 'Platformer, Action, Adventure',
       screenshots: [],
       videos: [],
       downloads: [

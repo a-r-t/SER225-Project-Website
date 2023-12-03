@@ -12,7 +12,8 @@
     :downloads="downloads"
   )
     template(v-slot:about)
-      p N/A
+      p Master the elements in this unforgettable platforming adventure!
+      p Can you defeat all of the bosses and become the true elemental hero?
     template(v-slot:instructions)
       p N/A
     template(v-slot:notes)
@@ -40,7 +41,7 @@ export default {
       managerNames: [
         'Kevin Rodriguez'
       ],
-      heroScreenshotFilePath: '',
+      heroScreenshotFilePath: require('./assets/titlescreen.png'),
       genre: 'Platformer, Action',
       screenshots: [],
       videos: [],

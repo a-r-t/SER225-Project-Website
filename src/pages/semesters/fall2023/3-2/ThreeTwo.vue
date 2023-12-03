@@ -12,7 +12,10 @@
     :downloads="downloads"
   )
     template(v-slot:about)
-      p N/A
+      p Based off of the Quinnipiac Hockey Team's incredible championship run in 2023, 
+        i The Road To Victory 
+        span will allow you to battle each of their opponents during the Frozen Four.
+      p Do you have what it takes to bring home the trophy?
     template(v-slot:instructions)
       p N/A
     template(v-slot:notes)
@@ -40,7 +43,7 @@ export default {
       managerNames: [
         'Rion-Mark McLaren'
       ],
-      heroScreenshotFilePath: '',
+      heroScreenshotFilePath: require('./assets/titlescreen.png'),
       genre: 'RPG',
       screenshots: [],
       videos: [],

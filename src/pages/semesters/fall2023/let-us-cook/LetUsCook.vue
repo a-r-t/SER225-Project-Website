@@ -12,7 +12,9 @@
     :downloads="downloads"
   )
     template(v-slot:about)
-      p N/A
+      p What happens when you mix an roguelike game with a food theme?
+      p You get an incredibly unique experience full of rooms to explore, enemies to defeat, and skills to unlock.
+      p And yes, everything in this game is food related. And we mean EVERYTHING.
     template(v-slot:instructions)
       p N/A
     template(v-slot:notes)
@@ -41,7 +43,7 @@ export default {
       managerNames: [
         'Brian Wanamaker'
       ],
-      heroScreenshotFilePath: '',
+      heroScreenshotFilePath: require('./assets/titlescreen.png'),
       genre: 'Roguelike',
       screenshots: [],
       videos: [],

@@ -12,7 +12,11 @@
     :downloads="downloads"
   )
     template(v-slot:about)
-      p N/A
+      p Hope you're ready for a scavenger hunt!
+      p In this game, you will need to explore several worlds, collect items, and fight enemies in order to survive.
+      p And for those of you that are fans of 
+        i Gossip Girl, 
+        can you spot all of the references spread throughout the game?
     template(v-slot:instructions)
       p N/A
     template(v-slot:notes)
@@ -40,7 +44,7 @@ export default {
       managerNames: [
         'Emily Balboni'
       ],
-      heroScreenshotFilePath: '',
+      heroScreenshotFilePath: require('./assets/titlescreen.png'),
       genre: 'RPG, Collect-a-Thon',
       screenshots: [],
       videos: [],

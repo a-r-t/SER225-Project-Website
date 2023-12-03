@@ -12,7 +12,11 @@
     :downloads="downloads"
   )
     template(v-slot:about)
-      p N/A
+      p Prepare to go on a time travel adventure like no other!
+      p In 
+        i Time Dynasties
+        span , you will explore several different time periods to collect parts, solve puzzles, and fight bosses.
+      p It is up to you to fix the time machine in order to return home!
     template(v-slot:instructions)
       p N/A
     template(v-slot:notes)
@@ -41,7 +45,7 @@ export default {
       managerNames: [
         'Chris Rocco'
       ],
-      heroScreenshotFilePath: '',
+      heroScreenshotFilePath: require('./assets/titlescreen.png'),
       genre: 'RPG, Adventure',
       screenshots: [],
       videos: [],

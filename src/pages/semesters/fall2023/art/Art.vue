@@ -12,7 +12,10 @@
     :downloads="downloads"
   )
     template(v-slot:about)
-      p N/A
+      p Welcome to Quinnipiac!
+      p As a newly admitted student, it is up to you to complete all quests across campus in order to graduate.
+      p Along the way, you will explore popular campus locations and meet several &#40;in&#41;famous characters that make Quinnipiac the special school that it is.
+      p Go Bobcats!
     template(v-slot:instructions)
       p N/A
     template(v-slot:notes)
@@ -39,7 +42,7 @@ export default {
         'Ryan Sliger'
       ],
       managerNames: [],
-      heroScreenshotFilePath: '',
+      heroScreenshotFilePath: require('./assets/titlescreen.png'),
       genre: 'Adventure, RPG',
       screenshots: [],
       videos: [],

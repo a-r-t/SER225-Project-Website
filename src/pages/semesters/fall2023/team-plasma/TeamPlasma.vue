@@ -12,7 +12,8 @@
     :downloads="downloads"
   )
     template(v-slot:about)
-      p N/A
+      p HELP! Several Quinnipiac professors have suddenly started acting strange and are causing chaos across campus.
+      p Play as Boomer as you explore campus, defeat enemies in combat, and get to the bottom of this mystery in order to save Quinnipiac!
     template(v-slot:instructions)
       p N/A
     template(v-slot:notes)
@@ -41,7 +42,7 @@ export default {
       managerNames: [
         'Humna Hanif'
       ],
-      heroScreenshotFilePath: '',
+      heroScreenshotFilePath: require('./assets/titlescreen.png'),
       genre: 'RPG',
       screenshots: [],
       videos: [],

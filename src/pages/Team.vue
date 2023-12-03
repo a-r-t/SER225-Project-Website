@@ -1,7 +1,7 @@
 <template lang="pug">
 .root
   Fall2022(v-if="semester === 'fall2022'" :team="team")
-  Fall2022(v-else-if="semester === 'fall2023'" :team="team")
+  Fall2023(v-else-if="semester === 'fall2023'" :team="team")
   template(v-else)
     p.error-message Invalid Semester!
 </template>

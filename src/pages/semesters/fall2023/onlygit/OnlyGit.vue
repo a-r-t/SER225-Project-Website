@@ -12,7 +12,9 @@
     :downloads="downloads"
   )
     template(v-slot:about)
-      p N/A
+      p Time to put your problem solving skills to the test!
+      p Explore and complete each level, which introduces a new challenging puzzle for you to solve.
+      p Can you get the highscore?
     template(v-slot:instructions)
       p N/A
     template(v-slot:notes)
@@ -40,8 +42,8 @@ export default {
       managerNames: [
         'William Siri (Billy)'
       ],
-      heroScreenshotFilePath: '',
-      genre: 'Platformer, Puzzle',
+      heroScreenshotFilePath: require('./assets/titlescreen.png'),
+      genre: 'Puzzle, Platformer',
       screenshots: [],
       videos: [],
       downloads: [

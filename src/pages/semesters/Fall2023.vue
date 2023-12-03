@@ -30,7 +30,7 @@ import TeamPlasma from './fall2023/team-plasma/TeamPlasma.vue'
 import XoxoGossipGirl from './fall2023/xoxo-gossip-girl/XoxoGossipGirl.vue'
 
 export default {
-  name: 'Fall2022',
+  name: 'Fall2023',
   components: {
     ThreeTwo,
     Art,

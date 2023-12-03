@@ -25,6 +25,8 @@
         p.asset-description {{ screenshot.description }}
       h3 Instructions
       slot(name="instructions")
+      h3 Notes
+      slot(name="notes")
       h3 Videos
       .video(v-for="video in videos" :key="video.filePath")
         video(:src="`${video.filePath}`" controls preload="metadata")
@@ -38,10 +40,6 @@
 export default {
   name: 'Project',
   props: {
-    projectAssetDirectory: {
-      type: String,
-      required: true
-    },
     teamName: {
       type: String,
       required: true

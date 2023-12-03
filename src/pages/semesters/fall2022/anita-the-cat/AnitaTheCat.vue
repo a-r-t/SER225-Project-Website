@@ -1,7 +1,6 @@
 <template lang="pug">
 .root
   Project(
-    :projectAssetDirectory="projectAssetDirectory",
     :teamName="teamName",
     :repoUrl="repoUrl",
     :developerNames="developerNames"
@@ -33,7 +32,7 @@
         li Press I to either reveal or hide the inventory. 
         li Press E while the inventory is active to drop Anita's current held item. 
         li Press O to reveal the instructions for the sound system
-      h3 Notes
+    template(v-slot:notes)
       ul
         li The Hall of Shame easter egg is hidden behind Pizza's house in the Summer Zone.
         li Collect 15 coins and bring them to the moyai head in the Haunted House to unlock a secret.
@@ -54,7 +53,6 @@ export default {
   },
   data() {
     return {
-      projectAssetDirectory: '',
       teamName: 'Anita the Cat',
       repoUrl: 'https://github.com/jjnoga/Witchy-Cat-Game',
       developerNames: [
@@ -99,73 +97,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.outer-container {
-  display: flex;
-  justify-content: center;
-  background: #5D7A8C;
-}
-
-.container {
-  width: 60rem;
-  margin-top: 28px;
-  margin-right: 20px;
-  margin-left: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 10px;  
-  background: #99B4BF;
-  border: 2px solid #253C59;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-}
-
-.screenshot {
-  display: flex;
-  flex-direction: column;
-}
-
-img {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 100%;
-  height: auto;
-  border-radius: 7px;
-  border: 2px solid #253C59;
-}
-
-a {
-  color: #253C59;
-}
-
-a:active {
-  color: #8a5f11;
-}
-
-.asset-description {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  margin-top: 5px;
-  font-style: italic;
-  margin-bottom: 30px;
-}
-
-.download-container {
-  margin-bottom: 10px;
-}
-
-.video {
-  display: flex;
-  flex-direction: column;
-}
-
-video {
-  max-width: 100%;
-  border-radius: 7px;
-  margin-right: auto;
-  margin-left: auto;
-  border: 2px solid #253C59;
-}
-</style>

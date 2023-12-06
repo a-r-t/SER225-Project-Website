@@ -18,9 +18,19 @@
         i Gossip Girl
         span , can you spot all of the references spread throughout the game?
     template(v-slot:instructions)
-      p N/A
+      p Press space to start the game 
+      p Use the arrows on the keyboard to select which character you would like to play with 
+      p Press enter to begin the game and then press enter after the video has played to begin playing
+      p Walk using the arrows on the keyboard or run using A,W,S,D 
+      p Collect items by running over them 
+      p Beware of enemies they will decrease health, collecting items however will increase health 
+      p When the axe is collected use E to hit enemies 
+      p When key is collected go to the portal 
+      p To talk to NPCs by walking up to them and pressing space 
+      p To answer a trivia question press space and then enter the number of your answer
     template(v-slot:notes)
-      p N/A
+      p When the player reaches the second level there is trivia questions about Gossip Girl after you collect an item. 
+        | You must select the correct answer to collect the item and complete the level.
 </template>
 
 <script>
@@ -46,8 +56,23 @@ export default {
       ],
       heroScreenshotFilePath: require('./assets/titlescreen.png'),
       genre: 'RPG, Collect-a-Thon',
-      screenshots: [],
-      videos: [],
+      screenshots: [
+        {
+          filePath: require('./assets/CharacterSelect.png'),
+          description: 'Choose wisely...'
+        },
+        {
+          filePath: require('./assets/Level1.png'),
+          description: 'Watch out for zombies!'
+        },
+        {
+          filePath: require('./assets/Level2.png'),
+          description: 'How well do you know your Gossip Girl lore?'
+        }
+      ],
+      videos: [
+
+      ],
       downloads: [
         {
           url: 'https://drive.google.com/uc?export=download&id=1RAgN8MeH92dRJAcYkqkOLoWWLLCNK7KT',

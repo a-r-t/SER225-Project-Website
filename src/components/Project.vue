@@ -35,8 +35,10 @@
           video(:src="`${video.filePath}`" controls preload="metadata")
           p.asset-description {{ video.description }}
       h3 Downloads
-      .download-container(v-for="download in downloads" :key="download.url" v-if="downloads.length > 0")
-        a(:href="download.url" download target="_blank") {{ download.description }}
+      ul
+        .download-container(v-for="download in downloads" :key="download.url" v-if="downloads.length > 0")
+          li
+            a(:href="download.url" download target="_blank") {{ download.description }}
 </template>
 
 <script>

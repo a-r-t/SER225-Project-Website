@@ -16,9 +16,26 @@
       p Explore and complete each level, which introduces a new challenging puzzle for you to solve.
       p Can you get the highscore?
     template(v-slot:instructions)
-      p N/A
+      h4 Objective:
+      p As a skillful thief, your mission is to navigate through a labyrinth of cunning booby traps and vigilant guards. 
+        | Your ultimate goal is to make a daring escape from the high-security facility.
+      
+      h4 Controls:
+      ul
+        li Up Arrow: Allows you to jump
+        li Down Arrow: Lay down to avoid detection or navigate low spaces
+        li Right Arrow: Move forward, advancing through the facility
+        li Left Arrow: Move backward, retreat or reposition as needed
+        li Space Bar: Interact with objects and elements within the game Helpful Tips:
     template(v-slot:notes)
-      p N/A
+      ul
+        li If you find yourself at a loss on how to conquer Level 1, seek out the wise walrus for guidance. 
+          | This intriguing character holds the key to progressing further in your adventure.
+        li Keep an eye out for sparkling gems scattered throughout the facility. 
+          | Each gem you collect unveils fascinating facts and secrets, enriching your gameplay experience.
+      
+      p Should you need a reminder of the controls or require further assistance, access the instruction page available in the main menu. 
+        | Here, you'll find detailed guidelines and helpful hints to enhance your thieving escapade.
 </template>
 
 <script>
@@ -44,8 +61,30 @@ export default {
       ],
       heroScreenshotFilePath: require('./assets/titlescreen.png'),
       genre: 'Puzzle, Platformer',
-      screenshots: [],
-      videos: [],
+      screenshots: [
+        {
+          filePath: require('./assets/Level1.png'),
+          description: 'Level 1'
+        },
+        {
+          filePath: require('./assets/Level2.jpg'),
+          description: 'Level 2'
+        },
+        {
+          filePath: require('./assets/Level3.jpg'),
+          description: 'Level 3'
+        },
+        {
+          filePath: require('./assets/Level4.jpg'),
+          description: 'Level 4'
+        }
+      ],
+      videos: [
+        {
+          filePath: require('./assets/game-video.mp4'),
+          description: 'Full Game Playthrough'
+        }
+      ],
       downloads: [
         {
           url: 'https://drive.google.com/uc?export=download&id=1VnF_1O9QKEiq5JRlH5zmkcw6VnDuqqOp',

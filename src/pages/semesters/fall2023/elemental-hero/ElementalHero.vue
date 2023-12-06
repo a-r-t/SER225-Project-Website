@@ -35,7 +35,7 @@ export default {
       developerNames: [
         'Hunter Yocum',
         'Lukas Martino',
-        'Peter Zagarek',
+        'Peter Zegarek',
         'Philip Nora'
       ],
       managerNames: [

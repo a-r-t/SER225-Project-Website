@@ -54,7 +54,7 @@ export default {
         },
         {
           url: 'https://drive.google.com/uc?export=download&id=1TUxkR930og6Or-HMOcZTve-vdiPp6b34',
-          description: 'Download JAR File with Player Invincibility Mod (game is difficult -- this is for those that want to experience the entire game without having to worry about dying)'
+          description: 'Download JAR File with Player Invincibility Mod (this is for those that want to experience the entire game without having to worry about dying)'
         }
       ]
     }

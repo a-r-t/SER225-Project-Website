@@ -52,7 +52,9 @@ export default {
         'Kastrijot Syla (Kash)',
         'Mia Troiano'
       ],
-      managerNames: [],
+      managerNames: [
+        'Alex Thimineur'
+      ],
       heroScreenshotFilePath: require('./assets/titlescreen.png'),
       genre: 'Puzzle',
       screenshots: [

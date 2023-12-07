@@ -16,9 +16,25 @@
       p You get an incredibly unique experience full of rooms to explore, enemies to defeat, and skills to unlock.
       p And yes, everything in this game is food related. And we mean EVERYTHING.
     template(v-slot:instructions)
-      p N/A
+      p Your goal is to make it through three floors of the food pyramid, navigating through rooms to a boss fight, then ascending to the next floor. 
+      p Use the skill tree available to upgrade your character and get stronger, and even unlock ultimate abilities! 
+      p There is a shop that allows you to get new items and projectiles to make your character more versatile.                                   
+      
+      h4 Controls:                                                                                                     
+      ul
+        li Movement - WASD                                                                                       
+        li Fire Projectile - J                                                                                       
+        li Use Current Ultimate Ability - L                                                            
+        li View Skill Tree - T                                                                                       
+        li Pause Game - P                                                                            
+        li Inventory Menu - I                                                                                           
+        li View/Change Active Ultimate Screen - M                                                       
+        li Interact/Talk/Use Door - SPACE                                                                 
+        li Escape Window - ESC or Same Key Used to Open Window                            
     template(v-slot:notes)
-      p N/A
+      ul
+        li You won't  be able to see your ultimates by using M until you've unlocked them! So make sure to unlock them first!                 
+        li There is a secret hidden somewhere inside the game! His name is Platino! Try and find him!
 </template>
 
 <script>
@@ -45,8 +61,27 @@ export default {
       ],
       heroScreenshotFilePath: require('./assets/titlescreen.png'),
       genre: 'Roguelike',
-      screenshots: [],
-      videos: [],
+      screenshots: [
+        {
+          filePath: require('./assets/gameplay2.png'),
+          description: 'Traverse rooms and defeat enemies!'
+        },
+        {
+          filePath: require('./assets/gameplay3.png'),
+          description: 'Be sure to collect goodies along the way!'
+        },
+        {
+          filePath: require('./assets/skilltree1.png'),
+          description: 'Don\t forget to upgrade your skills in the Skill Tree!'
+        },
+        {
+          filePath: require('./assets/skilltree2.png'),
+          description: 'The Skill Tree allows the player to do things like increase their attack power, attack range, and more!'
+        }
+      ],
+      videos: [
+        
+      ],
       downloads: [
         {
           url: 'https://drive.google.com/uc?export=download&id=1fM7Q_HD_RSsifLvvVvkP-p4dWEVKRbFc',

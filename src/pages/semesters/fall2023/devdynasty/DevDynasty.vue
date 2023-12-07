@@ -98,7 +98,12 @@ export default {
           description: 'Watch out -- some people don\'t take too kindly to time travelers!'
         }
       ],
-      videos: [],
+      videos: [
+        {
+          filePath: require('./assets/game-video.mp4'),
+          description: 'Full Game Playthrough'
+        }
+      ],
       downloads: [
         {
           url: 'https://drive.google.com/uc?export=download&id=1xdAlqxMwMWjydnLnMzDN7f_XhnbWcplA',

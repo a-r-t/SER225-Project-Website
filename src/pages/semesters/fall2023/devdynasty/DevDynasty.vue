@@ -21,19 +21,19 @@
       p Your goal for this game is to explore various time periods to get items you need to repair your time machine and return home. 
         | In each level, you must defeat the final boss and they will drop the item and your time machine will reappear. 
         | Return to your home base and bring the item to the item table to unlock the next level. 
-        | After you return the final item to the table, interact with the table again to win the game.
-	      | Each level has a unique combat minigame. You will be provided with instructions for each minigame before you play it for the first time.
+        | After you return the final item to the table, interact with the table again to win the game. 
+        | Each level has a unique combat minigame. You will be provided with instructions for each minigame before you play it for the first time.
 
-	    h4 Controls:
-		  ul
+      h4 Controls:
+      ul
         li W-A-S-D to move
-		    li Mouse / left click to activate buttons
-		    li Shift to sprint
-		    li Esc to pause (adjust volume from the pause menu)
-		    li Enter to interact with objects/NPCs
-		    li ` to select no item
-		    li 1-2-3-4 to choose item slot
-		    li R to drop item with slot selected (if dropped item on the table, just interact with the table, you do not need to worry about which slot you have chosen)
+        li Mouse / left click to activate buttons
+        li Shift to sprint
+        li Esc to pause (adjust volume from the pause menu)
+        li Enter to interact with objects/NPCs
+        li ` to select no item
+        li 1-2-3-4 to choose item slot
+        li R to drop item with slot selected (if dropped item on the table, just interact with the table, you do not need to worry about which slot you have chosen)
     template(v-slot:notes)
       ul
         li In order to change costumes and to enter the saloon, you need to go far to the bottom left of the map and there will be a building. 

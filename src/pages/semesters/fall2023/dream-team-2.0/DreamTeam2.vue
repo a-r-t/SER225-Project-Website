@@ -17,9 +17,24 @@
       p The name of the game is to strategically switch gravity as you make your way through each level.
       p If you want a challenge, look no further -- this game will test you!
     template(v-slot:instructions)
-      p N/A
+      p Your goal is to traverse through each platforming level and get to the portal at the end of every level.
+      p There are various kinds of enemies and obstacles that you will need to avoid. 
+      p There are six levels that you need to complete to finish the game. 
+        | There are also coins on each level for you to collect.
+
+      h4 Controls:
+      ul
+        li W key: Reverses the player's gravity
+        li A key: Move Left
+        li D key: Move Right
+        li F key: will allow you to shoot fireballs at enemies once you get the power-up.
+        li SHIFT key: will allow you to sprint while holding a movement button, once you get the sprint powerup
     template(v-slot:notes)
-      p N/A
+      ul
+        li If you run out of time on the level timer, you will have to start over, but if you die on a particular level, you will respawn at the start of that level. 
+        li The hitbox on the powerups may be a bit small so, you might need to move around and hit it directly on 
+        li The audio may overlap a little if Greg keeps dying, so in case the audio repeats, you can just hit mute on your laptop. 
+
 </template>
 
 <script>
@@ -45,8 +60,26 @@ export default {
       ],
       heroScreenshotFilePath: require('./assets/titlescreen.png'),
       genre: 'Platformer, Action',
-      screenshots: [],
-      videos: [],
+      screenshots: [
+        {
+          filePath: require('./assets/gameplay1.png'),
+          description: 'Complete each level!'
+        },
+        {
+          filePath: require('./assets/gameplay2.png'),
+          description: 'Use gravity switching to your advantage!'
+        },
+        {
+          filePath: require('./assets/gameplay3.png'),
+          description: 'Watch out for enemies!'
+        }
+      ],
+      videos: [
+        {
+          filePath: require('./assets/game-video.mp4'),
+          description: 'Full Game Playthrough'
+        }
+      ],
       downloads: [
         {
           url: 'https://drive.google.com/uc?export=download&id=1OSdOkrmkUWxGE-DejNgEtqKIHruWCIHz',

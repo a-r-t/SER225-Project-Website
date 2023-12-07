@@ -8,10 +8,10 @@
       .subcontainer
         h2.subheader(style="margin-top:0px") What is this site?
         .paragraph-container
-          p.medium This site proudly displays the projects made by students taking Quinnipiac University's SER225 course.
+          p This site proudly displays the projects made by students taking Quinnipiac University's SER225 course.
         h2.subheader What is SER225?
         .paragraph-container
-          p.medium SER225 is the (in)famous Intro to Software Development course. 
+          p SER225 is the (in)famous Intro to Software Development course. 
           p Students are put into assigned groups, given a base project, and learn how to use and apply Agile Methodology principles and values in order to develop the project further in their own desired direction.
             | Traditionally, the base project given out is a game of some kind (platformer, RPG, etc.).
             | The teams of students go through a phase where the plan out the direction they want to take the game in, and strategize how they are going to make the most out of their Sprints to get all the highest priority work done.
@@ -133,10 +133,6 @@ video {
 
 .subheader {
   font-size: 25px
-}
-
-.medium {
-  font-size: 20px;
 }
 
 .header-image-container {

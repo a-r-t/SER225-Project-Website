@@ -80,7 +80,10 @@ export default {
         }
       ],
       videos: [
-        
+        {
+          filePath: require('./assets/game-video.mp4'),
+          description: 'Full Game Playthrough'
+        }
       ],
       downloads: [
         {

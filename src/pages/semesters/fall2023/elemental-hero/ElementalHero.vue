@@ -88,7 +88,12 @@ export default {
           description: 'Kraken Boss Fight'
         }
       ],
-      videos: [],
+      videos: [
+        {
+          filePath: require('./assets/game-video.mp4'),
+          description: 'Full Game Playthrough'
+        }
+      ],
       downloads: [
         {
           url: 'https://drive.google.com/uc?export=download&id=1zejd4S-XPo8Pwd7S4JjmJcqcwR7qWQ7r',

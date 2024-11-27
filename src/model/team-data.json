@@ -213,7 +213,7 @@
             { "name": "Christopher Anzilotti", "alias": "Chris Anzilotti" },
             { "name": "Lucas Jenkins" },
             { "name": "Omar Fofana" },
-            { "name": "SeSe Allerheiligen" },
+            { "name": "SeSe Allerheiligen", "alias": "Sarah Allerheiligen" },
             { "name": "Humna Hanif" }
           ]
         },
@@ -226,6 +226,214 @@
             { "name": "Milena Silva" },
             { "name": "Tess Bossdorf" },
             { "name": "Emily Balboni" }
+          ]
+        }
+      ]
+    },
+    {
+      "semester": "fall2024",
+      "display": "Fall 2024",
+      "teams": [
+        {
+          "team": "airplane",
+          "display": "Airplane",
+          "members": [
+            { "name": "Aislin Hayes" },
+            { "name": "Andrew McCleary" },
+            { "name": "Ayden Hafidi" },
+            { "name": "Jacob Levin" },
+            { "name": "Oscar Lin" }
+          ]
+        },
+        {
+          "team": "arachnerds-inc",
+          "display": "Arachnerds, Inc.",
+          "members": [
+            { "name": "Brooks Jackson" },
+            { "name": "Callandra Ruiter" },
+            { "name": "Eric May" },
+            { "name": "Ryan Slattery" }
+          ]
+        },
+        {
+          "team": "avenghers",
+          "display": "AvengHERS",
+          "members": [
+            { "name": "Isabela Ayers", "alias": "Leila Ayers" },
+            { "name": "Megan Mohr" },
+            { "name": "Reeya Patel" },
+            { "name": "Tripp Menhall", "alias": "Dalton Menhall" },
+            { "name": "Tyler Rinko" },
+            { "name": "Gabriella Pierce", "alias": "Gabby Pierce" },
+            { "name": "Milena Silva"}
+          ]
+        },
+        {
+          "team": "byte-me",
+          "display": "Byte Me",
+          "members": [
+            { "name": "Billy Godoy" },
+            { "name": "Brady Galligan" },
+            { "name": "Connor Nylund" },
+            { "name": "Maximus Riat", "alias": "Max Riat" },
+            { "name": "Tannon Bryant" },
+            { "name": "Harsh Gandhi" },
+            { "name": "Julia Bock" }
+          ]
+        },
+        {
+          "team": "cascade",
+          "display": "Cascade",
+          "members": [
+            { "name": "Mark Pfister" },
+            { "name": "Matthew Wheeler", "alias": "Matt Wheeler" },
+            { "name": "Max Cheezic" },
+            { "name": "Pierce Conway" },
+            { "name": "Ryan Seely" },
+            { "name": "Andrew Labbe" },
+            { "name": "Garrett Goldberg" }
+          ]
+        },
+        {
+          "team": "dawgs",
+          "display": "Dawgs",
+          "members": [
+            { "name": "Adelina Chocho" },
+            { "name": "Ella Berry" },
+            { "name": "Morgan Montz" },
+            { "name": "Samantha Woodburn", "alias": "Sam Woodburn" },
+            { "name": "Tuana Turhan" }
+          ]
+        },
+        {
+          "team": "delirium",
+          "display": "Delirium",
+          "members": [
+            { "name": "Akshaj Illa" },
+            { "name": "Brandon McCrave" },
+            { "name": "Nicholas Demetrio", "alias": "Nick Demetrio" },
+            { "name": "Juliet Lombardi" },
+            { "name": "Tamar Foster" },
+            { "name": "Victor Fuda" }
+          ]
+        },
+        {
+          "team": "gameforge-alchemists",
+          "display": "Gameforge Alchemists",
+          "members": [
+            { "name": "Dawit Kasy" },
+            { "name": "Erin Swearingen" },
+            { "name": "Jean LaFrance" },
+            { "name": "Skhy Morris" },
+            { "name": "Thomas Rua", "alias": "Thom Rua" },
+            { "name": "Caden Effrece" },
+            { "name": "Caleb Muriuki-Mureithi" }
+          ]
+        },
+        {
+          "team": "gamesrock",
+          "display": "Gamesrock",
+          "members": [
+            { "name": "Fahim Kalange" },
+            { "name": "Jacorian Adom", "alias": "JJ Adom" },
+            { "name": "Michael Alvarado", "alias": "Mike Alvarado" },
+            { "name": "Sebastian Salazar", "alias": "Seb Salazar" },
+            { "name": "Mia Troiano" }
+          ]
+        },
+        {
+          "team": "hobo",
+          "display": "Hobo",
+          "members": [
+            { "name": "Andrew Ehlers" },
+            { "name": "Evan Vastakis" },
+            { "name": "Grant Foody" },
+            { "name": "Jessica Theodore", "alias": "Jess Theodore" },
+            { "name": "Natalie Spiska" }
+          ]
+        },
+        {
+          "team": "mjs-of-game-design",
+          "display": "MJ's of Game Design",
+          "members": [
+            { "name": "Anthony Gonzalez Bravo" },
+            { "name": "Benjamin Delton" },
+            { "name": "Hayden Ward" },
+            { "name": "Mario Panagrosso" },
+            { "name": "Samuel Joor", "alias": "Sam Joor" },
+            { "name": "Charlize Aponte" }
+          ]
+        },
+        {
+          "team": "rift",
+          "display": "Rift",
+          "members": [
+            { "name": "Jace Pivarnik" },
+            { "name": "Khang Nguyen" },
+            { "name": "Sean Emede" },
+            { "name": "Shawn Acheampong" }
+          ]
+        },
+        {
+          "team": "rpg",
+          "display": "RPG",
+          "members": [
+            { "name": "Isaias Barreto" },
+            { "name": "Jason Handrahan" },
+            { "name": "Jeremy Wiening" },
+            { "name": "Jesse Chaput" },
+            { "name": "Paul Zegarek" },
+            { "name": "Dylan Bellinger" },
+            { "name": "Steven Griffin" }
+          ]
+        },
+        {
+          "team": "sintax",
+          "display": "SinTax",
+          "members": [
+            { "name": "Andrew Goodman" },
+            { "name": "Conner Brooks-Chapman" },
+            { "name": "Lehan Dharmatilake" },
+            { "name": "Thomas Mitropoulos" },
+            { "name": "Camryn Keller" },
+            { "name": "SeSe Allerheiligen", "alias": "Sarah Allerheiligen" }
+          ]
+        },
+        {
+          "team": "skybound",
+          "display": "Skybound",
+          "members": [
+            { "name": "Daniel Vitashkevich" },
+            { "name": "Ethan Kulawiak" },
+            { "name": "Joshua Molin" },
+            { "name": "Zakaria Merzougui", "alias": "Zak Merzougui" },
+            { "name": "Aamnah Malik" },
+            { "name": "Tess Bossdorf" }
+          ]
+        },
+        {
+          "team": "sleepy-squad",
+          "display": "Sleepy Squad",
+          "members": [
+            { "name": "Aditi Baghel" },
+            { "name": "Diego Matayoshi" },
+            { "name": "Khila Sanchez", "alias": "Khi Sanchez" },
+            { "name": "Stella Leonard" },
+            { "name": "Trey Paraska", "alias": "Eugene Paraska" },
+            { "name": "Cameron Anthony" },
+            { "name": "Gregory Jean-Baptiste", "alias": "Greg Jean-Baptiste" }
+          ]
+        },
+        {
+          "team": "slime-otissey",
+          "display": "Slime Otissey",
+          "members": [
+            { "name": "Aleena Graveline" },
+            { "name": "John Caceres" },
+            { "name": "MollyAnn O'Malley" },
+            { "name": "Ryan Barbarito" },
+            { "name": "Eric Carlson" },
+            { "name": "Marcus Ferreira" }
           ]
         }
       ]

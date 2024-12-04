@@ -88,7 +88,10 @@
           },
         ],
         videos: [
-          
+          {
+            filePath: require('./assets/game-video.mp4'),
+            description: 'Example Fights'
+          }
         ],
         downloads: [
           {

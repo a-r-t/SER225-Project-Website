@@ -91,7 +91,7 @@
           },
           {
             filePath: require('./assets/meme.png')
-          },
+          }
         ],
         videos: [        
           {

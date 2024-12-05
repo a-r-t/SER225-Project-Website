@@ -16,10 +16,10 @@
       template(v-slot:instructions)
         p This is a platformer game, so the goal is to get to the end of the map while avoiding obstacles and fighting enemies. 
         p You can use the arrow keys to move around and space to interact with NPCs and objects or pick up items. 
-        p There are various perks as well as weapons throughout the map that the player can pick up to help him win as well as other collectibles that unlock new characters for the player. 
         p After picking up a weapon, use X to fight back against your enemies.
       template(v-slot:notes)
-        
+        p There are various perks as well as weapons throughout the map that the player can pick up, as well as other collectibles that unlock new characters for the player. 
+
   </template>
   
   <script>

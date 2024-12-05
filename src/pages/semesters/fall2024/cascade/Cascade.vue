@@ -51,7 +51,10 @@
 
         ],
         downloads: [
-
+          {
+            url: 'https://drive.google.com/uc?export=download&id=1cyCzDg_O1qAN-w0CkYNYqqRU94Zr7ZBm',
+            description: 'Download JAR File (must have Java 21 or greater installed)'
+          }
         ]
       }
     }

@@ -18,7 +18,7 @@
       template(v-slot:instructions)
         p As the only one who is really concerned about your brother, your goal is to find out where he is and uncover what happened to him. 
           | Make sure you use the journal and talk to NPCs to unlock more pages and clues!
-        h4 Controls:
+        h4(style="margin-bottom: 0px") Controls:
         ol
           li TO MOVE: Use the arrow keys.
           li TO TALK: Use the space key to talk to other characters.

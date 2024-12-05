@@ -58,13 +58,18 @@
           'Aamnah Malik',
           'Tess Bossdorf'
         ],
-        heroScreenshotFilePath: undefined,
+        heroScreenshotFilePath: require('./assets/titlescreen.png'),
         genre: 'Platformer',
         screenshots: [
-          
+          {
+            filePath: require('./assets/gameplay.png')
+          },
         ],
         videos: [
-
+          {
+            filePath: require('./assets/game-video.mp4'),
+            description: 'Example Gameplay'
+          }
         ],
         downloads: [
           {

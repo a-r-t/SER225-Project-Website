@@ -31,15 +31,29 @@
       template(v-slot:notes)
         p When exiting a pop-up page, press escape and one of the arrow keys to exit the image. 
         p Keep an eye out for anything unusual around the map!
+        h4 Help, I'm stuck on the part of the game with the crossword puzzle -- it's too hard!
+        p While the crossword puzzle is intended to be challenging, we would not want to prevent you from progressing in the game if you truly cannot figure out the answers. 
+          | Click on the appropriate collapsible below for the answer to a few of the trickier questions:
+        Collapsible(title="5 letter word to describe an overwhelming feeling of fear and anxiety")
+          template(v-slot:content)
+            p(style="padding-left:5px;margin-bottom: 8px;margin-top: 8px;") PANIC
+        Collapsible(title="10 letter term for exploring events that are beyond scientific reasoning" style="margin-top: 10px;")
+          template(v-slot:content)
+            p(style="padding-left:5px;margin-bottom: 8px;margin-top: 8px;") PARANORMAL
+        Collapsible(title="8 letter word meaning a state of nervous uncertainty for what comes next" style="margin-top: 10px;")
+          template(v-slot:content)
+            p(style="padding-left:5px;margin-bottom: 8px;margin-top: 8px;") SUSPENSE
   </template>
   
   <script>
   import Project from '../../../../components/Project.vue'
+  import Collapsible from '../../../../components/Collapsible.vue'
   
   export default {
     name: 'Dawgs',
     components: {
-      Project
+      Project,
+      Collapsible
     },
     data() {
       return {

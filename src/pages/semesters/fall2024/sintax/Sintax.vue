@@ -62,9 +62,13 @@
         ],
         downloads: [
           {
-            url: 'https://drive.google.com/uc?export=download&id=1eRB8gF_bjwY9uE1OANZMvM_7mYW63AIk',
+            url: 'https://drive.google.com/uc?export=download&id=1ZI7rj691JX_TPiSN7JC6T90Ol1EqIfRw',
             description: 'Download JAR File (must have Java 21 or greater installed)'
-          }
+          },
+          {
+          url: 'https://drive.google.com/uc?export=download&id=1P9FKPDNt4J7NInLere5-2adO0lsZirl6',
+          description: 'Download JAR File with Player Invincibility Mod (this is for those that want to experience the entire game without having to worry about dying)'
+        }
         ]
       }
     }

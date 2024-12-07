@@ -44,10 +44,6 @@ export default {
   border: 1px solid black;
 }
 
-.collapsible:hover {
-  cursor: pointer;
-}
-
 .toggle-button {
   width: 100%;
   text-align: left;

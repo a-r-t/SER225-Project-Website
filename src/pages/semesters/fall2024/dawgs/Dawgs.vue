@@ -43,6 +43,19 @@
         Collapsible(title="8 letter word meaning a state of nervous uncertainty for what comes next" style="margin-top: 10px;")
           template(v-slot:content)
             p(style="padding-left:5px;margin-bottom: 8px;margin-top: 8px;") SUSPENSE
+        h4 Multiple Endings
+        p There are two possible endings that you can get upon finishing the game based on the decisions you make while playing.
+          | One of the endings is very common, while the other ending requires you to make very specific decisions.
+          | It is very likely on your first playthrough that you will receive the "bad" ending.
+          | If you have already played through the game once and would like to know which decisions need to be made in order to get the "better" ending on a subsequent playthrough, click the collapsible below to see what you need to do:
+        Collapsible(title="How to get the \"better\" ending")
+          template(v-slot:content)
+            p(style="padding-left:5px;margin-bottom: 8px;margin-top: 8px;") You must make the following choices while playing the game:
+            ul
+              li Do NOT tell your mom what you are doing when she asks (you have to explicitly tell her that you won't tell her)
+              li Do NOT help Camila with her crossword puzzle (you have to explicitly refuse)
+              li After helping the butcher with his meat scale puzzle, keep pushing the butcher for more info until he croaks
+              li Do NOT help the little girl save the Mad Hatter in the alleyway (you have to explicitly refuse)
   </template>
   
   <script>

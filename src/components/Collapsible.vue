@@ -1,7 +1,7 @@
 <template lang="pug">
   .root
-    button.toggle-button(@click="toggleCollapsible") {{ toggleText }}
-    .collapsible(v-if="!isCollapsed")
+    button.toggle-button(@click="toggleCollapsible" :style="toggleButtonStyles") {{ toggleText }}
+    .collapsible(v-if="!isCollapsed" :style="collapsibleStyles")
       slot(name="content")
 
 </template>
@@ -20,6 +20,26 @@ export default {
     title: {
       type: String,
       required: true
+    },
+    buttonBackgroundColor: {
+      type: String,
+      default: 'white'
+    },
+    buttonTextColor: {
+      type: String,
+      default: 'black'
+    },
+    backgroundColor: {
+      type: String,
+      default: 'transparent'
+    },
+    borderColor: {
+      type: String,
+      default: 'black'
+    },
+    borderThickness: {
+      type: String,
+      default: '1px'
     }
   },
   created() {
@@ -28,6 +48,18 @@ export default {
   computed: {
     toggleText() {
       return this.isCollapsed ? `> ${this.title}` : `˅ ${this.title}`
+    },
+    collapsibleStyles() {
+      return {
+        background: this.backgroundColor,
+        border: `${this.borderThickness} solid ${this.borderColor} !important`
+      }
+    },
+    toggleButtonStyles() {
+      return {
+        background: this.buttonBackgroundColor,
+        color: this.buttonTextColor
+      }
     }
   },
   methods: {
@@ -41,7 +73,6 @@ export default {
 <style scoped>
 .collapsible {
   padding-bottom: 2px;
-  border: 1px solid black;
 }
 
 .toggle-button {

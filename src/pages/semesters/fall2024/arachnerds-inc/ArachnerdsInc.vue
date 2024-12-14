@@ -74,8 +74,12 @@
         ],
         downloads: [
           {
-            url: 'https://drive.google.com/uc?export=download&id=1pf5C6grzwOGgw4X0I8Kz_h2BPaRe4GiT',
+            url: 'https://drive.google.com/uc?export=download&id=1csWe1_15QdoieaN9XXtEL-NNwDPwiSf8',
             description: 'Download JAR File (must have Java 21 or greater installed)'
+          },
+          {
+            url: 'https://drive.google.com/uc?export=download&id=1A6hwMHWiUf3mflnI1LcH75dY8L2VwaLz',
+            description: 'Download JAR File with Player Buff Mod (this is for those that have difficulty with platformers -- it makes the player move faster and jump higher to allow for an easier time playing through the game)'
           }
         ]
       }

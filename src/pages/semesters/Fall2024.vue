@@ -1,27 +1,6 @@
-<template lang="pug">
-.root
-  Airplane(v-if="team === 'airplane'")
-  ArachnerdsInc(v-else-if="team === 'arachnerds-inc'")
-  Avenghers(v-else-if="team === 'avenghers'")
-  ByteMe(v-else-if="team === 'byte-me'")
-  Cascade(v-else-if="team === 'cascade'")
-  Dawgs(v-else-if="team === 'dawgs'")
-  Delirium(v-else-if="team === 'delirium'")
-  GameforgeAlchemists(v-else-if="team === 'gameforge-alchemists'")
-  Gamesrock(v-else-if="team === 'gamesrock'")
-  Hobo(v-else-if="team === 'hobo'")
-  MjsOfGameDesign(v-else-if="team === 'mjs-of-game-design'")
-  Rift(v-else-if="team === 'rift'")
-  RPG(v-else-if="team === 'rpg'")
-  Sintax(v-else-if="team === 'sintax'")
-  Skybound(v-else-if="team === 'skybound'")
-  SleepySquad(v-else-if="team === 'sleepy-squad'")
-  SlimeOtissey(v-else-if="team === 'slime-otissey'")
-  template(v-else)
-    p.error-message Invalid Team!
-</template>
+<script setup lang="ts">
+import { defineProps } from 'vue'
 
-<script>
 import Airplane from './fall2024/airplane/Airplane.vue'
 import ArachnerdsInc from './fall2024/arachnerds-inc/ArachnerdsInc.vue'
 import Avenghers from './fall2024/avenghers/Avenghers.vue'
@@ -40,35 +19,34 @@ import Skybound from './fall2024/skybound/Skybound.vue'
 import SleepySquad from './fall2024/sleepy-squad/SleepySquad.vue'
 import SlimeOtissey from './fall2024/slime-otissey/SlimeOtissey.vue'
 
-export default {
-  name: 'Fall2024',
-  components: {
-    Airplane,
-    ArachnerdsInc,
-    Avenghers,
-    ByteMe,
-    Cascade,
-    Dawgs,
-    Delirium,
-    GameforgeAlchemists,
-    Gamesrock,
-    Hobo,
-    MjsOfGameDesign,
-    Rift,
-    RPG,
-    Sintax,
-    Skybound,
-    SleepySquad,
-    SlimeOtissey,
-  },
-  props: {
-    team: {
-      type: String,
-      required: true
-    }
-  }
-}
+const props = defineProps<{
+  team: string
+}>()
 </script>
+
+<template>
+  <div class="root">
+    <Airplane v-if="props.team === 'airplane'" />
+    <ArachnerdsInc v-else-if="props.team === 'arachnerds-inc'" />
+    <Avenghers v-else-if="props.team === 'avenghers'" />
+    <ByteMe v-else-if="props.team === 'byte-me'" />
+    <Cascade v-else-if="props.team === 'cascade'" />
+    <Dawgs v-else-if="props.team === 'dawgs'" />
+    <Delirium v-else-if="props.team === 'delirium'" />
+    <GameforgeAlchemists v-else-if="props.team === 'gameforge-alchemists'" />
+    <Gamesrock v-else-if="props.team === 'gamesrock'" />
+    <Hobo v-else-if="props.team === 'hobo'" />
+    <MjsOfGameDesign v-else-if="props.team === 'mjs-of-game-design'" />
+    <Rift v-else-if="props.team === 'rift'" />
+    <RPG v-else-if="props.team === 'rpg'" />
+    <Sintax v-else-if="props.team === 'sintax'" />
+    <Skybound v-else-if="props.team === 'skybound'" />
+    <SleepySquad v-else-if="props.team === 'sleepy-squad'" />
+    <SlimeOtissey v-else-if="props.team === 'slime-otissey'" />
+
+    <p v-else class="error-message">Invalid Team!</p>
+  </div>
+</template>
 
 <style scoped>
 .error-message {

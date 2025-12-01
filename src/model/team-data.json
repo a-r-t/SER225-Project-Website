@@ -129,7 +129,7 @@
           "display": "devDynasty",
           "members": [
             { "name": "Alex Power" },
-            { "name": "Christian Kilduff" },
+            { "name": "Christian Kilduff", "alias": "Chris Kilduff" },
             { "name": "Ryan Fennelly" },
             { "name": "Timothy McGinley", "alias": "Tim McGinley" },
             { "name": "Zoe McLaughlin" },
@@ -354,7 +354,7 @@
         },
         {
           "team": "mjs-of-game-design",
-          "display": "MJ's of Game Design",
+          "display": "MJs of Game Design",
           "members": [
             { "name": "Anthony Gonzalez Bravo" },
             { "name": "Benjamin Delton" },
@@ -405,7 +405,7 @@
           "members": [
             { "name": "Daniel Vitashkevich" },
             { "name": "Ethan Kulawiak" },
-            { "name": "Joshua Molin" },
+            { "name": "Joshua Molin", "alias": "Josh Molin" },
             { "name": "Zakaria Merzougui", "alias": "Zak Merzougui" },
             { "name": "Aamnah Malik" },
             { "name": "Tess Bossdorf" }
@@ -437,6 +437,148 @@
           ]
         }
       ]
+    },
+    {
+      "semester": "fall2025",
+      "display": "Fall 2025",
+      "teams": [
+        {
+          "team": "5-swords",
+          "display": "5 Swords",
+          "members": [
+            { "name": "Alex Gold" },
+            { "name": "Christopher Falcone", "alias": "Chris Falcone" },
+            { "name": "Evan Alves" },
+            { "name": "Kate Francis" },
+            { "name": "Matthew Maher", "alias": "Matt Maher" },
+            { "name": "Tripp Menhall", "alias": "Dalton Menhall" },
+            { "name": "Tyler Rinko" }
+          ]
+        },
+        {
+          "team": "bees",
+          "display": "Bees",
+          "members": [
+            { "name": "Alexander Pina", "alias": "Alex Pina" },
+            { "name": "Julian Colon" },
+            { "name": "TJ Therrien", "alias": "Antonio Therrien" },
+            { "name": "Tyler Smalley" },
+            { "name": "Jean LaFrance" },
+            { "name": "Ethan Kulawiak" }
+          ]
+        },
+        {
+          "team": "bobcat-brawlers",
+          "display": "Bobcat Brawlers",
+          "members": [
+            { "name": "Aaron Wilhelm" },
+            { "name": "Andrew Goodman" },
+            { "name": "Joseph Lurie", "alias": "Joe Lurie" },
+            { "name": "Lucas Deutsch" },
+            { "name": "Nolan Krieger" },
+            { "name": "Brandon McCrave" },
+            { "name": "Joshua Molin", "alias": "Josh Molin" }
+          ]
+        },
+        {
+          "team": "chaos-emeralds",
+          "display": "Chaos Emeralds",
+          "members": [
+            { "name": "Aditi Baghel" },
+            { "name": "Hunter Pageau" },
+            { "name": "MD Fayed Salim" },
+            { "name": "Philip Kwiatkowski", "alias": "Phil Kwiatkowski" },
+            { "name": "Wilson Chen" },
+            { "name": "Ryan Seely" }
+          ]
+        },
+        {
+          "team": "clankers",
+          "display": "Clankers",
+          "members": [
+            { "name": "Adam Parks" },
+            { "name": "Andrew Ozimek" },
+            { "name": "Cody Lippy" },
+            { "name": "Jacob Batson" },
+            { "name": "Khang Nguyen" },
+            { "name": "Connor Nylund" },
+            { "name": "Tannon Bryant" }
+          ]
+        },
+        {
+          "team": "gogo-squeez",
+          "display": "GoGo Squeez",
+          "members": [
+            { "name": "Elias Hoxha" },
+            { "name": "Kaab Dawit" },
+            { "name": "Lukas Perrelli" },
+            { "name": "Luke Petrocelli" },
+            { "name": "Slater Von Stetten" },
+            { "name": "Aleena Graveline" },
+            { "name": "Calvin Pancavage" }
+          ]
+        },
+        {
+          "team": "kraken-killers",
+          "display": "Kraken Killers",
+          "members": [
+            { "name": "Gwen Bradshaw" },
+            { "name": "Nicky Desai" },
+            { "name": "Jaiden Palazzo" },
+            { "name": "Oscar Lin" },
+            { "name": "Shawn Acheampong" }
+          ]
+        },
+        {
+          "team": "matt-hatters",
+          "display": "Matt Hatters",
+          "members": [
+            { "name": "Brian Palchizaca Neira" },
+            { "name": "Brody Chevrier" },
+            { "name": "Matthew Jones" },
+            { "name": "Mia Hernandez" },
+            { "name": "Jason Jackson" },
+            { "name": "Tuana Turhan" }
+          ]
+        },
+        {
+          "team": "metaphoric-weapons",
+          "display": "Metaphoric Weapons",
+          "members": [
+            { "name": "Aurelien Buisine" },
+            { "name": "Benjamin Bailor", "alias": "Ben Bailor" },
+            { "name": "Dean Acheampong", "alias": "Kwabena Acheampong" },
+            { "name": "Jackson Sennhenn" },
+            { "name": "Ryan Davis", "alias": "Mitchell Davis" },
+            { "name": "Isabela Ayers", "alias": "Leila Ayers" }
+          ]
+        },
+        {
+          "team": "sada",
+          "display": "SADA",
+          "members": [
+            { "name": "Abner Garza" },
+            { "name": "Anne McCullagh", "alias": "Annie McCullagh" },
+            { "name": "Diya Patel" },
+            { "name": "Shane Seeley" },
+            { "name": "Christian Kilduff", "alias": "Chris Kilduff" }
+          ]
+        },
+        {
+          "team": "scrumblies",
+          "display": "Scrumblies",
+          "members": [
+            { "name": "Aiden Agas" },
+            { "name": "Reed Scampoli" },
+            { "name": "Zachary Marlowe", "alias": "Zach Marlowe" },
+            { "name": "Zachary Nedell", "alias": "Zach Nedell" },
+            { "name": "Hunter Yocum" },
+            { "name": "Paul Zegarek" }
+          ]
+        }
+      ]
     }
   ]
 }
+
+

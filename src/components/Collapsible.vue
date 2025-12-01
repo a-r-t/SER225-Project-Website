@@ -1,74 +1,63 @@
-<template lang="pug">
-  .root
-    button.toggle-button(@click="toggleCollapsible" :style="toggleButtonStyles") {{ toggleText }}
-    .collapsible(v-if="!isCollapsed" :style="collapsibleStyles")
-      slot(name="content")
+<script setup lang="ts">
+import { ref, computed } from 'vue'
 
-</template>
+interface Props {
+  title: string
+  buttonBackgroundColor?: string
+  buttonTextColor?: string
+  backgroundColor?: string
+  borderColor?: string
+  borderThickness?: string
+}
 
-<script>
-export default {
-  name: 'Navbar',
-  components: {
-  },
-  data() {
-    return {
-      isCollapsed: true
-    }
-  },
-  props: {
-    title: {
-      type: String,
-      required: true
-    },
-    buttonBackgroundColor: {
-      type: String,
-      default: 'white'
-    },
-    buttonTextColor: {
-      type: String,
-      default: 'black'
-    },
-    backgroundColor: {
-      type: String,
-      default: 'transparent'
-    },
-    borderColor: {
-      type: String,
-      default: 'black'
-    },
-    borderThickness: {
-      type: String,
-      default: '1px'
-    }
-  },
-  created() {
+const props = withDefaults(defineProps<Props>(), {
+  buttonBackgroundColor: 'white',
+  buttonTextColor: 'black',
+  backgroundColor: 'transparent',
+  borderColor: 'black',
+  borderThickness: '1px'
+})
 
-  },
-  computed: {
-    toggleText() {
-      return this.isCollapsed ? `> ${this.title}` : `˅ ${this.title}`
-    },
-    collapsibleStyles() {
-      return {
-        background: this.backgroundColor,
-        border: `${this.borderThickness} solid ${this.borderColor} !important`
-      }
-    },
-    toggleButtonStyles() {
-      return {
-        background: this.buttonBackgroundColor,
-        color: this.buttonTextColor
-      }
-    }
-  },
-  methods: {
-    toggleCollapsible() {
-      this.isCollapsed = !this.isCollapsed
-    }
-  }
+const isCollapsed = ref(true)
+
+const toggleText = computed(() =>
+  isCollapsed.value ? `> ${props.title}` : `˅ ${props.title}`
+)
+
+const collapsibleStyles = computed(() => ({
+  background: props.backgroundColor,
+  border: `${props.borderThickness} solid ${props.borderColor} !important`
+}))
+
+const toggleButtonStyles = computed(() => ({
+  background: props.buttonBackgroundColor,
+  color: props.buttonTextColor
+}))
+
+const toggleCollapsible = () => {
+  isCollapsed.value = !isCollapsed.value
 }
 </script>
+
+<template>
+  <div class="root">
+    <button
+      class="toggle-button"
+      @click="toggleCollapsible"
+      :style="toggleButtonStyles"
+    >
+      {{ toggleText }}
+    </button>
+
+    <div
+      v-if="!isCollapsed"
+      class="collapsible"
+      :style="collapsibleStyles"
+    >
+      <slot name="content"></slot>
+    </div>
+  </div>
+</template>
 
 <style scoped>
 .collapsible {

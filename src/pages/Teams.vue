@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import teamData from '../model/team-data.json'
 import VueSelect from "vue3-select-component";
@@ -17,7 +17,7 @@ const route = useRoute()
 const router = useRouter()
 
 const semesters = ref<Semester[]>([])
-const selectedSemester = ref<Semester | null>(null)
+const selectedSemester = ref<string | null>(null)
 const teams = ref<Team[]>([])
 
 const onSemesterSelected = () => {
@@ -41,7 +41,7 @@ const onSemesterSelected = () => {
       path: route.path,
       query: {
         ...route.query,
-        semester: selectedSemester.value ? selectedSemester.value.value : undefined,
+        semester: selectedSemester.value ? selectedSemester.value : undefined,
       },
     })
     .catch(() => {})
@@ -58,7 +58,7 @@ onMounted(() => {
   if (querySemester) {
     const found = semesters.value.find((s) => s.value === querySemester)
     if (found) {
-      selectedSemester.value = found
+      selectedSemester.value = found.value
       onSemesterSelected()
     }
   }

@@ -39,7 +39,8 @@ const screenshots = ref<Screenshot[]>([
   { filePath: new URL('./assets/gameplay4.jpg', import.meta.url).href }
 ])
 const videos = ref<Video[]>([
-  { filePath: new URL('./assets/game-video.mp4', import.meta.url).href, description: 'Full Game Playthrough' }
+  { filePath: new URL('./assets/game-video.mp4', import.meta.url).href, description: 'Full Game Playthrough' },
+  { filePath: new URL('./assets/highscore.mp4', import.meta.url).href, description: 'Fastest speed run (as of 11/30/2025)' }
 ])
 const downloads = ref<Download[]>([
   { url: 'https://drive.google.com/uc?export=download&id=15g7-Kc8FFRLOIRZWB7Zia5fU66qPjR7z', description: 'Download JAR File (must have Java 21 or greater installed)' }

@@ -17,7 +17,7 @@ interface Download {
   description: string
 }
 
-const teamName = ref("MJ's of Game Design")
+const teamName = ref("MJs of Game Design")
 const repoUrl = ref('https://github.com/anthony-gon/smash-fighters')
 const developerNames = ref<string[]>([
   'Anthony Gonzalez Bravo',

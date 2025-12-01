@@ -5,6 +5,7 @@ import { useRoute } from 'vue-router'
 import Fall2022 from './semesters/Fall2022.vue'
 import Fall2023 from './semesters/Fall2023.vue'
 import Fall2024 from './semesters/Fall2024.vue'
+import Fall2025 from './semesters/Fall2025.vue'
 
 const route = useRoute()
 
@@ -22,6 +23,7 @@ onMounted(() => {
     <Fall2022 v-if="semester === 'fall2022'" :team="team" />
     <Fall2023 v-else-if="semester === 'fall2023'" :team="team" />
     <Fall2024 v-else-if="semester === 'fall2024'" :team="team" />
+    <Fall2025 v-else-if="semester === 'fall2025'" :team="team" />
     <p v-else class="error-message">Invalid Semester!</p>
   </div>
 </template>

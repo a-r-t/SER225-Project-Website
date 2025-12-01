@@ -1,81 +1,116 @@
-<template lang="pug">
-.root
-  .outer-container
-    .container
-      .semester-select-container
-        h1.semesters-header Semesters
-        p.no-margin.semester-select-label Select which semester you would like to see the teams for.
-        v-select.semester-select(
-          :options="semesters" 
-          label="display" 
-          placeholder="Choose a semester..." 
-          v-model="selectedSemester" 
-          :searchable="false" 
-          class="semester-select"
-          @input="onSemesterSelected"
-        )
-  .outer-container(v-if="selectedSemester")
-    .container
-      .team-select-container
-        h1.teams-header Teams
-        router-link.team-link(v-for="team in teams" :key="team.display" :to="`/semesters/${selectedSemester.value}/teams/${team.value}`" target="_blank") {{ team.display }}
-</template>
-
-<script>
+<script setup lang="ts">
+import { ref, onMounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import teamData from '../model/team-data.json'
+import VueSelect from "vue3-select-component";
+import "vue3-select-component/styles";
+import type { Option } from "vue3-select-component";
 
-export default {
-  name: 'Teams',
-  created() {
-    this.semesters = teamData.semesters.map(semester => {
-      return {
-        display: semester.display,
-        value: semester.semester
-      }
+type Semester = Option<string>
+
+interface Team {
+  label: string
+  value: string
+}
+
+const route = useRoute()
+const router = useRouter()
+
+const semesters = ref<Semester[]>([])
+const selectedSemester = ref<Semester | null>(null)
+const teams = ref<Team[]>([])
+
+const onSemesterSelected = () => {
+  if (selectedSemester.value) {
+    const semesterData = teamData.semesters.find(
+      (s: any) => s.semester === selectedSemester.value
+    )
+    if (semesterData) {
+      teams.value = semesterData.teams
+        .map((t: any) => ({ label: t.display, value: t.team }))
+        .sort((a: Team, b: Team) =>
+          a.label.toLowerCase() > b.label.toLowerCase() ? 1 : -1
+        )
+    }
+  } else {
+    teams.value = []
+  }
+
+  router
+    .replace({
+      path: route.path,
+      query: {
+        ...route.query,
+        semester: selectedSemester.value ? selectedSemester.value.value : undefined,
+      },
     })
+    .catch(() => {})
+}
 
-    if (this.$route.query.semester) {
-      this.selectedSemester = this.semesters.find(semester => semester.value === this.$route.query.semester)
-      this.onSemesterSelected(this.selectedSemester)
-    }
-  },
-  data() {
-    return {
-      semesters: [],
-      selectedSemester: '',
-      teams: []
-    }
-  },
-  components: {
-  },
-  methods: {
-    onSemesterSelected(selectedSemester) {
-      this.selectedSemester = selectedSemester
-      if (this.selectedSemester) {
-        this.teams = teamData.semesters
-          .find(semester => semester.semester === this.selectedSemester.value)
-          .teams
-          .map(team => {
-            return {
-              display: team.display,
-              value: team.team
-            }
-          })
-        this.teams.sort((a, b) => (a.display.toLowerCase() > b.display.toLowerCase()) ? 1 : -1)
-      }
-      return this.$router.replace({ path: this.$route.path, query: {...this.$route.query, semester: this.selectedSemester ? this.selectedSemester.value : undefined }})
-        .catch(() => {})
-        .finally(() => {})
+// Initialize semesters and preselect semester from query param if available
+onMounted(() => {
+  semesters.value = teamData.semesters.map((s: any) => ({
+    label: s.display,
+    value: s.semester,
+  }))
+
+  const querySemester = route.query.semester as string | undefined
+  if (querySemester) {
+    const found = semesters.value.find((s) => s.value === querySemester)
+    if (found) {
+      selectedSemester.value = found
+      onSemesterSelected()
     }
   }
-}
+})
 </script>
+
+<template>
+  <div class="root">
+    <div class="outer-container">
+      <div class="container">
+        <div class="semester-select-container">
+          <h1 class="semesters-header">Semesters</h1>
+          <p class="no-margin semester-select-label">
+            Select which semester you would like to see the teams for.
+          </p>
+          <VueSelect
+            class="semester-select"
+            :options="semesters"
+            label="label"
+            placeholder="Choose a semester..."
+            v-model="selectedSemester"
+            :isSearchable="false"
+            @option-selected="onSemesterSelected"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="outer-container" v-if="selectedSemester">
+      <div class="container">
+        <div class="team-select-container">
+          <h1 class="teams-header">Teams</h1>
+          <router-link
+            v-for="team in teams"
+            :key="team.label"
+            class="team-link"
+            :to="`/semesters/${selectedSemester}/teams/${team.value}`"
+            target="_blank"
+          >
+            {{ team.label }}
+          </router-link>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 
 <style scoped>
 .outer-container {
   display: flex;
   justify-content: center;
-  background: #5D7A8C;
+  background: #5d7a8c;
 }
 
 .container {
@@ -85,9 +120,9 @@ export default {
   margin-left: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  border-radius: 10px;  
-  background: #99B4BF;
-  border: 2px solid #253C59;
+  border-radius: 10px;
+  background: #99b4bf;
+  border: 2px solid #253c59;
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
@@ -108,7 +143,7 @@ export default {
 
 .semester-select {
   width: 420px;
-  color: #253C59;
+  color: #253c59;
 }
 
 .teams-header {
@@ -125,7 +160,7 @@ export default {
 .team-link {
   margin-bottom: 10px;
   font-size: 20px;
-  color: #253C59;
+  color: #253c59;
 }
 
 .team-link:active {

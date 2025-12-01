@@ -1,52 +1,70 @@
-<template lang="pug">
-.root
-  .outer-container
-    .header-image-container
-      .header-container
-        h1.header Welcome to the SER225 Project Website!
-    .container
-      .subcontainer
-        h2.subheader(style="margin-top:0px") What is this site?
-        .paragraph-container
-          p This site proudly displays the projects made by students taking Quinnipiac University's SER225 course.
-        h2.subheader What is SER225?
-        .paragraph-container
-          p SER225 is the (in)famous Intro to Software Development course. 
-          p Students are put into assigned groups, given a base project, and learn how to use and apply Agile Methodology principles and values in order to develop the project further in their own desired direction.
-            | Traditionally, the base project given out is a game of some kind (platformer, RPG, etc.).
-            | The teams of students go through a phase where the plan out the direction they want to take the game in, and strategize how they are going to make the most out of their Sprints to get all the highest priority work done.
-          p During this course, students learn how to put all of the programming fundamentals they learned in previous courses into practice.
-            | They also improve on their communication, problem-solving, time management, and version control skills.
-            | Finally, the "workplace simulation" that is put into place during this course gives students familiarity with how work gets done in the industry,
-            | which not only prepares them for internships and jobs, but also gets them excited for their futures and builds their confidence.
-        h2.subheader How To Use This Site
-        .paragraph-container
-          p The 
-            router-link(to="/teams") Teams
-            |  page will allow you to look at all of the projects done by each team of students in a given semester.
-          p There is also a 
-            router-link(to="/search") Search
-            |  page will allow you to look up a specific student's or team's project quickly in the case that you are having difficulty finding it.
-        h2.subheader What does the base project look like?
-        .paragraph-container
-          p The base project changes every so often, but most recently the students were given the options between two different games to start with -- a platformer or a top-down styled RPG.
-          h3 Platformer
-          a.github-link(href="https://github.com/a-r-t/SER-225-Game-Platformer") GitHub Repo
-          .video
-            video(:src="require('../assets/platformer-gameplay.mp4')" controls preload="metadata")
-          h3 RPG
-          a.github-link(href="https://github.com/a-r-t/SER-225-Game-RPG") GitHub Repo
-          .video
-            video(:src="require('../assets/rpg-gameplay.mp4')" controls preload="metadata")
-</template>
+<template>
+  <div class="root">
+    <div class="outer-container">
+      <div class="header-image-container">
+        <div class="header-container">
+          <h1 class="header">Welcome to the SER225 Project Website!</h1>
+        </div>
+      </div>
 
-<script>
-export default {
-  name: 'Home',
-  components: {
-  }
-}
-</script>
+      <div class="container">
+        <div class="subcontainer">
+          <h2 class="subheader" style="margin-top:0px">What is this site?</h2>
+          <div class="paragraph-container">
+            <p>
+              This site proudly displays the projects made by students taking Quinnipiac University's SER225 course.
+            </p>
+          </div>
+
+          <h2 class="subheader">What is SER225?</h2>
+          <div class="paragraph-container">
+            <p>SER225 is the (in)famous Intro to Software Development course.</p>
+            <p>
+              Students are put into assigned groups, given a base project, and learn how to use and apply Agile Methodology principles and values in order to develop the project further in their own desired direction.
+              Traditionally, the base project given out is a game of some kind (platformer, RPG, etc.).
+              The teams of students go through a phase where the plan out the direction they want to take the game in, and strategize how they are going to make the most out of their Sprints to get all the highest priority work done.
+            </p>
+            <p>
+              During this course, students learn how to put all of the programming fundamentals they learned in previous courses into practice.
+              They also improve on their communication, problem-solving, time management, and version control skills.
+              Finally, the "workplace simulation" that is put into place during this course gives students familiarity with how work gets done in the industry,
+              which not only prepares them for internships and jobs, but also gets them excited for their futures and builds their confidence.
+            </p>
+          </div>
+
+          <h2 class="subheader">How To Use This Site</h2>
+          <div class="paragraph-container">
+            <p>
+              The <router-link to="/teams">Teams</router-link> page will allow you to look at all of the projects done by each team of students in a given semester.
+            </p>
+            <p>
+              There is also a <router-link to="/search">Search</router-link> page will allow you to look up a specific student's or team's project quickly in the case that you are having difficulty finding it.
+            </p>
+          </div>
+
+          <h2 class="subheader">What does the base project look like?</h2>
+          <div class="paragraph-container">
+            <p>
+              The base project changes every so often, but most recently the students were given the options between two different games to start with -- a platformer or a top-down styled RPG.
+            </p>
+
+            <h3>Platformer</h3>
+            <a class="github-link" href="https://github.com/a-r-t/SER-225-Game-Platformer">GitHub Repo</a>
+            <div class="video">
+              <video src="@/assets/platformer-gameplay.mp4" controls preload="metadata"></video>
+            </div>
+
+            <h3>RPG</h3>
+            <a class="github-link" href="https://github.com/a-r-t/SER-225-Game-RPG">GitHub Repo</a>
+            <div class="video">
+              <video src="@/assets/rpg-gameplay.mp4" controls preload="metadata"></video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 
 <style scoped>
 .outer-container {
@@ -119,7 +137,6 @@ video {
   margin-top: 10px;
   margin-bottom: 10px;
   width: fit-content;
-
 }
 
 .header {
@@ -132,12 +149,12 @@ video {
 }
 
 .subheader {
-  font-size: 25px
+  font-size: 25px;
 }
 
 .header-image-container {
   width: 100%;
-  background-image: url('~@/assets/header-background.png');
+  background-image: url('@/assets/header-background.png');
   display: flex;
   justify-content: center;
   border-bottom: 2px solid #253C59;

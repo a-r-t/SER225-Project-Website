@@ -1,98 +1,147 @@
-<template lang="pug">
-.root
-  .outer-container
-    .container
-      h1.search-header Search
-      p.no-margin.search-info-label You can search here by student name or team name to help you locate a specific project page.
-      .search-container
-        input.search-input(v-model="searchQuery" placeholder="Enter search query here...")
-        button.search-button(@click="search") &#x1F50D;
-      .search-fields-container
-        .search-field-container
-          input.search-field-radio-button(type="radio" value="student" v-model="searchField")
-          label Student
-        .search-field-container
-          input.search-field-radio-button(type="radio" value="team" v-model="searchField")
-          label Team
-  .outer-container(v-if="searchResults")
-    .container
-      .search-results
-        h1 Results 
-        template(v-if="searchResults && searchResults.length > 0")
-          router-link.result-link(v-for="searchResult in searchResults" :key="searchResult.display" :to="`/semesters/${searchResult.semester}/teams/${searchResult.team}`" target="_blank") {{ searchResult.display }}
-        template(v-else)
-          p.no-margin No results found!
 
-</template>
-
-<script>
+<script setup lang="ts">
+import { ref, onMounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import teamData from '../model/team-data.json'
 
-export default {
-  name: 'Search',
-  components: {
-  },
-  data() {
-    return {
-      searchQuery: '',
-      searchField: 'student',
-      searchResults: null,
-    }
-  },
-  created() {
-    if (this.$route.query.query) {
-      this.searchQuery = this.$route.query.query
-      this.search()
-    }
-  },
-  methods: {
-    search() {
-      if (!this.searchQuery) {
-        return
-      }
-      return this.$router.replace({ path: this.$route.path, query: {...this.$route.query, query: this.searchQuery ? this.searchQuery : undefined }})
-        .catch(() => {})
-        .finally(() => {
-          const query = this.searchQuery.toLowerCase()
-          const matches = []
-          const cache = new Set()
-          teamData.semesters.forEach(semester => {
-            semester.teams.forEach(team => {
-              if (this.searchField === 'student') {
-                team.members.forEach(member => {
-                  if (member.name.toLowerCase().includes(query) || (member.alias && member.alias.toLowerCase().includes(query))) {
-                    const display = `${semester.display} - ${team.display} (${member.name})`
-                    if (!cache.has(display)) {
-                      matches.push({ semester: semester.semester, team: team.team, display })
-                      cache.add(display)
-                    }
-                  }
-                })
-              }
-              else if (this.searchField === 'team') {
-                if (team.display.toLowerCase().includes(query)) {
-                  const display = `${semester.display} - ${team.display}`
-                  if (!cache.has(display)) {
-                    matches.push({ semester: semester.semester, team: team.team, display })
-                    cache.add(display)
-                  }
+interface SearchResult {
+  semester: string
+  team: string
+  display: string
+}
+
+const searchQuery = ref('')
+const searchField = ref<'student' | 'team'>('student')
+const searchResults = ref<SearchResult[] | null>(null)
+
+const route = useRoute()
+const router = useRouter()
+
+const search = () => {
+  if (!searchQuery.value) return
+
+  router
+    .replace({
+      path: route.path,
+      query: { ...route.query, query: searchQuery.value || undefined },
+    })
+    .catch(() => {})
+    .finally(() => {
+      const queryLower = searchQuery.value.toLowerCase()
+      const matches: SearchResult[] = []
+      const cache = new Set<string>()
+
+      teamData.semesters.forEach((semester: any) => {
+        semester.teams.forEach((team: any) => {
+          if (searchField.value === 'student') {
+            team.members.forEach((member: any) => {
+              if (
+                member.name.toLowerCase().includes(queryLower) ||
+                (member.alias && member.alias.toLowerCase().includes(queryLower))
+              ) {
+                const display = `${semester.display} - ${team.display} (${member.name})`
+                if (!cache.has(display)) {
+                  matches.push({ semester: semester.semester, team: team.team, display })
+                  cache.add(display)
                 }
               }
             })
-          })
-          matches.sort((a, b) => (a.display > b.display) ? 1 : -1)
-          this.searchResults = matches
+          } else if (searchField.value === 'team') {
+            if (team.display.toLowerCase().includes(queryLower)) {
+              const display = `${semester.display} - ${team.display}`
+              if (!cache.has(display)) {
+                matches.push({ semester: semester.semester, team: team.team, display })
+                cache.add(display)
+              }
+            }
+          }
         })
-      }
-  }
+      })
+
+      matches.sort((a, b) => (a.display > b.display ? 1 : -1))
+      searchResults.value = matches
+    })
 }
+
+// If query exists in route, initialize search
+onMounted(() => {
+  if (route.query.query) {
+    searchQuery.value = String(route.query.query)
+    search()
+  }
+})
 </script>
+
+<template>
+  <div class="root">
+    <div class="outer-container">
+      <div class="container">
+        <h1 class="search-header">Search</h1>
+        <p class="no-margin search-info-label">
+          You can search here by student name or team name to help you locate a specific project page.
+        </p>
+
+        <div class="search-container">
+          <input
+            class="search-input"
+            v-model="searchQuery"
+            placeholder="Enter search query here..."
+          />
+          <button class="search-button" @click="search">&#x1F50D;</button>
+        </div>
+
+        <div class="search-fields-container">
+          <div class="search-field-container">
+            <input
+              type="radio"
+              value="student"
+              v-model="searchField"
+              class="search-field-radio-button"
+            />
+            <label>Student</label>
+          </div>
+          <div class="search-field-container">
+            <input
+              type="radio"
+              value="team"
+              v-model="searchField"
+              class="search-field-radio-button"
+            />
+            <label>Team</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="outer-container" v-if="searchResults">
+      <div class="container">
+        <div class="search-results">
+          <h1>Results</h1>
+          <template v-if="searchResults.length > 0">
+            <router-link
+              v-for="searchResult in searchResults"
+              :key="searchResult.display"
+              class="result-link"
+              :to="`/semesters/${searchResult.semester}/teams/${searchResult.team}`"
+              target="_blank"
+            >
+              {{ searchResult.display }}
+            </router-link>
+          </template>
+          <template v-else>
+            <p class="no-margin">No results found!</p>
+          </template>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 
 <style scoped>
 .outer-container {
   display: flex;
   justify-content: center;
-  background: #5D7A8C;
+  background: #5d7a8c;
 }
 
 .container {
@@ -102,9 +151,9 @@ export default {
   margin-left: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  border-radius: 10px;  
-  background: #99B4BF;
-  border: 2px solid #253C59;
+  border-radius: 10px;
+  background: #99b4bf;
+  border: 2px solid #253c59;
   padding-bottom: 20px;
   margin-bottom: 20px;
   display: flex;
@@ -124,8 +173,7 @@ export default {
   width: 450px;
   font-size: 16px;
   font-family: 'Roboto';
-  border: none;
-  border:solid 1px #ccc;
+  border: 1px solid #ccc;
   border-radius: 5px;
   height: 35px;
   padding-left: 10px;
@@ -173,7 +221,7 @@ export default {
 .result-link {
   margin-bottom: 10px;
   font-size: 20px;
-  color: #253C59;
+  color: #253c59;
 }
 
 .result-link:active {

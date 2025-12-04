@@ -39,7 +39,7 @@ const videos = ref<Video[]>([
   { filePath: new URL('./assets/game-video.mp4', import.meta.url).href, description: 'Full Game Playthrough' },
 ])
 const downloads = ref<Download[]>([
-  { url: 'https://drive.google.com/uc?export=download&id=1B-vWcd1LvHsjkHqSxkWMaNg1xfFtizy4', description: 'Download JAR File (must have Java 25 or greater installed)' }
+  { url: 'https://drive.google.com/uc?export=download&id=1B-vWcd1LvHsjkHqSxkWMaNg1xfFtizy4', description: 'Download JAR File (must have Java 23 or greater installed)' }
 ])
 </script>
 

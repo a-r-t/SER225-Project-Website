@@ -42,7 +42,7 @@ const videos = ref<Video[]>([
   { filePath: new URL('./assets/game-video.mp4', import.meta.url).href, description: 'Full Game Playthrough' },
 ])
 const downloads = ref<Download[]>([
-  { url: 'https://drive.google.com/uc?export=download&id=1P8koziBWA2bSKAh_3CHb9fcHFSOpk8Mi', description: 'Download JAR File (must have Java 25 or greater installed)' }
+  { url: 'https://drive.google.com/uc?export=download&id=1P8koziBWA2bSKAh_3CHb9fcHFSOpk8Mi', description: 'Download JAR File (must have Java 23 or greater installed)' }
 ])
 </script>
 
@@ -137,7 +137,7 @@ const downloads = ref<Download[]>([
           <li>
             <strong>Final Boss</strong>
             <ul>
-              <li>Face the Final Boss and uncover the truth behind the Queen’s intentions.</li>
+              <li>Face the Final Boss and uncover the truth behind the Queen's intentions.</li>
             </ul>
           </li>
         </ul>
@@ -154,7 +154,7 @@ const downloads = ref<Download[]>([
             Behavior: 10 seconds after entering the Volcano Region, the ring changes enemy behavior and an event triggers.
           </li>
           <li>
-            Spawn the NPC: Appears in the Volcano map, tracks the player’s movement and gets destroyed when the ring is destroyed.
+            Spawn the NPC: Appears in the Volcano map, tracks the player's movement and gets destroyed when the ring is destroyed.
           </li>
           <li>
             Ending: Player must press E at the volcano during the event to destroy the ring.
@@ -166,7 +166,7 @@ const downloads = ref<Download[]>([
           <li>You must equip the Red Tunic for the Volcano Region and the Blue Tunic for the Frost Region to counter the potential precarious weather.</li>
           <li>If tunic switching glitches, press the number key again to fix it.</li>
           <li>
-            After changing areas with a tunic on, the bee’s sprite may be reset to the default yellow one, but the effect lingers. To fix this, simply swap the respective key twice to reactivate the tunic and reshow the bee.
+            After changing areas with a tunic on, the bee's sprite may be reset to the default yellow one, but the effect lingers. To fix this, simply swap the respective key twice to reactivate the tunic and reshow the bee.
           </li>
         </ul>
 
@@ -204,7 +204,7 @@ const downloads = ref<Download[]>([
         <h4>System Specs Advantage</h4>
         <ul>
           <li>
-            How many frames of attack and extracting nectar is based off your laptop’s performance. If the refresh rate on your device is higher, you will be able to get more damage off and extract nectar more efficiently compared to a less equipped one.
+            How many frames of attack and extracting nectar is based off your laptop's performance. If the refresh rate on your device is higher, you will be able to get more damage off and extract nectar more efficiently compared to a less equipped one.
           </li>
         </ul>
 

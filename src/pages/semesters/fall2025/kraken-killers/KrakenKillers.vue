@@ -29,10 +29,12 @@ const managerNames = ref<string[]>([
   'Shawn Acheampong'
 ])
 const heroScreenshotFilePath = ref(undefined)
-const genre = ref('')
+const genre = ref('Platformer')
 const screenshots = ref<Screenshot[]>([])
 const videos = ref<Video[]>([])
-const downloads = ref<Download[]>([])
+const downloads = ref<Download[]>([
+  { url: 'https://drive.google.com/uc?export=download&id=1jyeeorpUGiaEDhpKH5WOku43pGMeErux', description: 'Download JAR File (must have Java 21 or greater installed)' }
+])
 </script>
 
 <template>

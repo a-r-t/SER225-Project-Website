@@ -11,6 +11,7 @@ type Semester = Option<string>
 interface Team {
   label: string
   value: string
+  semester: string
 }
 
 const route = useRoute()
@@ -21,19 +22,32 @@ const selectedSemester = ref<string | null>(null)
 const teams = ref<Team[]>([])
 
 const onSemesterSelected = () => {
+  teams.value = []
   if (selectedSemester.value) {
-    const semesterData = teamData.semesters.find(
+    if (selectedSemester.value === 'all') {
+      teams.value = teamData.semesters.reduce((acc, curr) => {
+        const semesterTeams = curr.teams.map(team => ({
+          label: team.display,
+          value: team.team,
+          semester: curr.semester
+        }))
+        return acc.concat(semesterTeams)
+      }, [] as Team[])
+        .sort((a, b) => a.label.localeCompare(b.label))
+    }
+    else {
+      const semesterData = teamData.semesters.find(
       (s: any) => s.semester === selectedSemester.value
     )
     if (semesterData) {
       teams.value = semesterData.teams
-        .map((t: any) => ({ label: t.display, value: t.team }))
+        .map((t: any) => ({ label: t.display, value: t.team, semester: semesterData.semester }))
         .sort((a: Team, b: Team) =>
           a.label.toLowerCase() > b.label.toLowerCase() ? 1 : -1
         )
     }
-  } else {
-    teams.value = []
+    }
+    
   }
 
   router
@@ -53,6 +67,7 @@ onMounted(() => {
     label: s.display,
     value: s.semester,
   }))
+  semesters.value = semesters.value.concat([{label: 'All Teams', value: 'all'}])
 
   const querySemester = route.query.semester as string | undefined
   if (querySemester) {
@@ -95,7 +110,7 @@ onMounted(() => {
             v-for="team in teams"
             :key="team.label"
             class="team-link"
-            :to="`/semesters/${selectedSemester}/teams/${team.value}`"
+            :to="`/semesters/${team.semester}/teams/${team.value}`"
             target="_blank"
           >
             {{ team.label }}
